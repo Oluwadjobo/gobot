@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoBot Marketplace - Achetez et Vendez</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gobot-red': '#CD3446',
+                        'gobot-red-secondary': '#CB2C3F',
+                        'gobot-red-alt': '#CC3143',
+                        'gobot-blue': '#0F2E4A',
+                        'gobot-white': '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="tech-background">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold text-gobot-blue">
+                        Go<span class="text-gobot-red">Bot</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Accueil</a>
+                    <a href="food.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">GoBot Food</a>
+                    <a href="event.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">GoBot Event</a>
+                    <a href="mobile-money.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Mobile Money</a>
+                    <a href="assurance.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Assurance</a>
+                    <a href="school.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">GoBot School</a>
+                    <a href="marketplace.html" class="text-gobot-red font-medium">Marketplace</a>
+                    <a href="../contact.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold mb-6">🛒 GoBot Marketplace</h1>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                La plateforme de commerce électronique qui connecte acheteurs et vendeurs en Afrique de l'Ouest. 
+                Achetez, vendez et échangez en toute sécurité.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-gobot-red px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors">
+                    🛍️ Commencer à acheter
+                </button>
+                <button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-gobot-red transition-colors">
+                    💰 Commencer à vendre
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="text-3xl font-bold text-gobot-red mb-2">100,000+</div>
+                    <div class="text-gray-600">Produits disponibles</div>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="text-3xl font-bold text-gobot-red mb-2">25,000+</div>
+                    <div class="text-gray-600">Vendeurs actifs</div>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="text-3xl font-bold text-gobot-red mb-2">500,000+</div>
+                    <div class="text-gray-600">Clients satisfaits</div>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="text-3xl font-bold text-gobot-red mb-2">98%</div>
+                    <div class="text-gray-600">Transactions sécurisées</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gobot-blue mb-4">Nos Catégories Populaires</h2>
+                <p class="text-xl text-gray-600">Trouvez tout ce dont vous avez besoin</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">High-Tech & Électronique</h3>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li>• Smartphones & Tablettes</li>
+                        <li>• Ordinateurs & Accessoires</li>
+                        <li>• Électroménager</li>
+                        <li>• Appareils photo & Vidéo</li>
+                        <li>• Audio & Son</li>
+                    </ul>
+                    <div class="text-green-600 font-semibold">Livraison 24-48h</div>
+                </div>
+
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">👗</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">Mode & Beauté</h3>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li>• Vêtements hommes & femmes</li>
+                        <li>• Chaussures & Accessoires</li>
+                        <li>• Bijoux & Montres</li>
+                        <li>• Produits de beauté</li>
+                        <li>• Parfums & Cosmétiques</li>
+                    </ul>
+                    <div class="text-green-600 font-semibold">Essayage virtuel</div>
+                </div>
+
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">🏠</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">Maison & Jardin</h3>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li>• Meubles & Décoration</li>
+                        <li>• Électroménager</li>
+                        <li>• Outils & Bricolage</li>
+                        <li>• Jardinage & Extérieur</li>
+                        <li>• Cuisine & Arts de la table</li>
+                    </ul>
+                    <div class="text-green-600 font-semibold">Montage inclus</div>
+                </div>
+
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">🚗</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">Auto & Moto</h3>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li>• Véhicules neufs & occasions</li>
+                        <li>• Pièces détachées</li>
+                        <li>• Pneus & Jantes</li>
+                        <li>• Accessoires auto</li>
+                        <li>• Motos & Scooters</li>
+                    </ul>
+                    <div class="text-green-600 font-semibold">Expertise incluse</div>
+                </div>
+
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">📚</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">Livres & Culture</h3>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li>• Livres physiques & numériques</li>
+                        <li>• BD & Mangas</li>
+                        <li>• Musique & Films</li>
+                        <li>• Jeux vidéo</li>
+                        <li>• Instruments de musique</li>
+                    </ul>
+                    <div class="text-green-600 font-semibold">Téléchargement immédiat</div>
+                </div>
+
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">🏥</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">Santé & Bien-être</h3>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li>• Compléments alimentaires</li>
+                        <li>• Matériel médical</li>
+                        <li>• Sport & Fitness</li>
+                        <li>• Produits naturels</li>
+                        <li>• Équipements de sport</li>
+                    </ul>
+                    <div class="text-green-600 font-semibold">Conseil pharmacien</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selling Process -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gobot-blue mb-4">Comment vendre sur GoBot Marketplace ?</h2>
+                <p class="text-xl text-gray-600">Un processus simple en 4 étapes</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="step-card text-center p-6 rounded-2xl">
+                    <div class="w-12 h-12 bg-gobot-red text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">1</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">📝 Inscription vendeur</h3>
+                    <p class="text-gray-600 text-sm">Créez votre boutique en ligne gratuitement</p>
+                </div>
+
+                <div class="step-card text-center p-6 rounded-2xl">
+                    <div class="w-12 h-12 bg-gobot-red text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">2</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">📦 Ajout produits</h3>
+                    <p class="text-gray-600 text-sm">Publiez vos articles avec photos et descriptions</p>
+                </div>
+
+                <div class="step-card text-center p-6 rounded-2xl">
+                    <div class="w-12 h-12 bg-gobot-red text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">3</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">🛍️ Gestion des ventes</h3>
+                    <p class="text-gray-600 text-sm">Recevez et traitez les commandes</p>
+                </div>
+
+                <div class="step-card text-center p-6 rounded-2xl">
+                    <div class="w-12 h-12 bg-gobot-red text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">4</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">💰 Paiements</h3>
+                    <p class="text-gray-600 text-sm">Recevez vos gains automatiquement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seller Benefits -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gobot-blue mb-4">Avantages vendeurs</h2>
+                <p class="text-xl text-gray-600">Pourquoi choisir notre marketplace</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🚀</span>
+                    </div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Visibilité maximale</h3>
+                    <p class="text-gray-600 text-sm">500,000+ visiteurs par mois</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">💳</span>
+                    </div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Paiements sécurisés</h3>
+                    <p class="text-gray-600 text-sm">Protection acheteur/vendeur</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📊</span>
+                    </div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Analytics détaillés</h3>
+                    <p class="text-gray-600 text-sm">Tableaux de bord complets</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🎯</span>
+                    </div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Marketing intégré</h3>
+                    <p class="text-gray-600 text-sm">Outils promotionnels inclus</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Plans -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gobot-blue mb-4">Plans d'abonnement vendeurs</h2>
+                <p class="text-xl text-gray-600">Choisissez le plan qui correspond à vos besoins</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-transparent">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gobot-blue mb-2">Starter</h3>
+                        <div class="text-3xl font-bold text-gobot-red mb-4">Gratuit</div>
+                        <p class="text-gray-600 mb-6">Parfait pour débuter</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span class="text-gray-600">Jusqu'à 10 produits</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span class="text-gray-600">Commission 5%</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span class="text-gray-600">Support basique</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span class="text-gray-600">Paiements mensuels</span>
+                        </li>
+                    </ul>
+                    <button class="w-full btn-primary text-white py-3 rounded-xl font-semibold">
+                        Commencer gratuitement
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-gobot-red relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gobot-red text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Populaire
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gobot-blue mb-2">Pro</h3>
+                        <div class="text-3xl font-bold text-gobot-red mb-4">25,000 FCFA/mois</div>
+                        <p class="text-gray-600 mb-6">Pour les vendeurs actifs</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span class="text-gray-600">Produits illimités</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span class="text-gray-600">Commission 3%</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span class="text-gray-600">Support prioritaire</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span class="text-gray-600">Analytics avancés</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span class="text-gray-600">Paiements hebdomadaires</span>
+                        </li>
+                    </ul>
+                    <button class="w-full btn-primary text-white py-3 rounded-xl font-semibold">
+                        Choisir Pro
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-transparent">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gobot-blue mb-2">Enterprise</h3>
+                        <div class="text-3xl font-bold text-gobot-red mb-4">50,000 FCFA/mois</div>
+                        <p class="text-gray-600 mb-6">Pour les gros volumes</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span class="text-gray-600">Produits illimités</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span class="text-gray-600">Commission 2%</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span class="text-gray-600">Support dédié 24/7</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span class="text-gray-600">API personnalisée</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span class="text-gray-600">Paiements quotidiens</span>
+                        </li>
+                    </ul>
+                    <button class="w-full btn-primary text-white py-3 rounded-xl font-semibold">
+                        Choisir Enterprise
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="hero-section text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Prêt à rejoindre notre marketplace ?</h2>
+            <p class="text-lg mb-8">Plus de 25,000 vendeurs nous font confiance</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-2xl font-bold">🇧🇯 *144#</div>
+                    <div class="text-sm">Bénin</div>
+                </div>
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-2xl font-bold">🇹🇬 *155#</div>
+                    <div class="text-sm">Togo</div>
+                </div>
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-2xl font-bold">🇨🇮 *166#</div>
+                    <div class="text-sm">Côte d'Ivoire</div>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-gobot-red px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors">
+                    🛍️ Acheter maintenant
+                </button>
+                <button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-gobot-red transition-colors">
+                    💰 Devenir vendeur
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gobot-blue text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">GoBot Marketplace</h3>
+                    <p class="text-gray-300">La marketplace qui révolutionne le e-commerce en Afrique de l'Ouest</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Acheteurs</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Explorer les produits</a></li>
+                        <li><a href="#" class="hover:text-white">Offres spéciales</a></li>
+                        <li><a href="#" class="hover:text-white">Livraison</a></li>
+                        <li><a href="#" class="hover:text-white">Retours</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Vendeurs</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Créer une boutique</a></li>
+                        <li><a href="#" class="hover:text-white">Tarifs et commissions</a></li>
+                        <li><a href="#" class="hover:text-white">Outils vendeurs</a></li>
+                        <li><a href="#" class="hover:text-white">Formation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">GoBot Services</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="food.html" class="hover:text-white">GoBot Food</a></li>
+                        <li><a href="event.html" class="hover:text-white">GoBot Event</a></li>
+                        <li><a href="school.html" class="hover:text-white">GoBot School</a></li>
+                        <li><a href="mobile-money.html" class="hover:text-white">Mobile Money</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2025 GoBot Marketplace - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

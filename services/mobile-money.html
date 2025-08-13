@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoBot Mobile Money - Transactions sécurisées</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gobot-red': '#CD3446',
+                        'gobot-red-secondary': '#CB2C3F',
+                        'gobot-red-alt': '#CC3143',
+                        'gobot-blue': '#0F2E4A',
+                        'gobot-white': '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="tech-background">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold text-gobot-blue">
+                        Go<span class="text-gobot-red">Bot</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Accueil</a>
+                    <a href="food.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">GoBot Food</a>
+                    <a href="event.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">GoBot Event</a>
+                    <a href="mobile-money.html" class="text-gobot-red font-medium">Mobile Money</a>
+                    <a href="assurance.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Assurance</a>
+                    <a href="../contact.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center mb-6">
+                <span class="text-6xl mr-4">💰</span>
+                <h1 class="text-5xl font-bold">GoBot Mobile Money</h1>
+            </div>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Transactions rapides, sécurisées et sans frontières. Gérez votre argent en toute simplicité !
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="btn-primary text-white px-8 py-4 rounded-xl font-semibold text-lg">
+                    💳 Faire une transaction
+                </button>
+                <button class="bg-white text-gobot-red px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors">
+                    🏪 Devenir agent
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gobot-blue mb-12">
+                Nos services Mobile Money
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">📱</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Transfert d'argent</h3>
+                    <p class="text-gray-600 mb-4">
+                        Envoyez et recevez de l'argent instantanément vers tous les réseaux mobiles.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>✓ Transferts instantanés</li>
+                        <li>✓ Vers tous opérateurs</li>
+                        <li>✓ Frais compétitifs</li>
+                        <li>✓ 24h/24 - 7j/7</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">💳</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Paiement factures</h3>
+                    <p class="text-gray-600 mb-4">
+                        Payez toutes vos factures : électricité, eau, internet, télévision, etc.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>✓ Électricité (SBEE, CIE, CEET)</li>
+                        <li>✓ Eau (SONEB, SODECI, TDE)</li>
+                        <li>✓ Internet & Télévision</li>
+                        <li>✓ Assurances et crédits</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">🛒</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Achats en ligne</h3>
+                    <p class="text-gray-600 mb-4">
+                        Payez vos achats en ligne sur tous les sites marchands partenaires.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>✓ E-commerce sécurisé</li>
+                        <li>✓ Paiement en 1 clic</li>
+                        <li>✓ Protection acheteur</li>
+                        <li>✓ Cashback disponible</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">💸</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Crédit express</h3>
+                    <p class="text-gray-600 mb-4">
+                        Obtenez un crédit instantané directement sur votre téléphone.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>✓ Approbation immédiate</li>
+                        <li>✓ Pas de garantie requise</li>
+                        <li>✓ Remboursement flexible</li>
+                        <li>✓ Historique de crédit</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">💰</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Épargne intelligente</h3>
+                    <p class="text-gray-600 mb-4">
+                        Épargnez automatiquement avec des taux d'intérêt avantageux.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>✓ Épargne automatique</li>
+                        <li>✓ Taux préférentiels</li>
+                        <li>✓ Objectifs personnalisés</li>
+                        <li>✓ Retraits flexibles</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">🌍</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Transfert international</h3>
+                    <p class="text-gray-600 mb-4">
+                        Envoyez de l'argent partout dans le monde en toute sécurité.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>✓ Plus de 50 pays</li>
+                        <li>✓ Taux de change compétitifs</li>
+                        <li>✓ Suivi en temps réel</li>
+                        <li>✓ Réception instantanée</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gobot-blue mb-12">
+                Comment utiliser GoBot Mobile Money ?
+            </h2>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="step-card bg-gray-50 p-6 rounded-2xl text-center">
+                    <div class="bg-gobot-red text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Appelez</h3>
+                    <p class="text-gray-600 text-sm">Contactez-nous au numéro de votre pays</p>
+                </div>
+                
+                <div class="step-card bg-gray-50 p-6 rounded-2xl text-center">
+                    <div class="bg-gobot-red text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Choisissez</h3>
+                    <p class="text-gray-600 text-sm">Sélectionnez votre type de transaction</p>
+                </div>
+                
+                <div class="step-card bg-gray-50 p-6 rounded-2xl text-center">
+                    <div class="bg-gobot-red text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Confirmez</h3>
+                    <p class="text-gray-600 text-sm">Validez avec votre code PIN</p>
+                </div>
+                
+                <div class="step-card bg-gray-50 p-6 rounded-2xl text-center">
+                    <div class="bg-gobot-red text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">C'est fait !</h3>
+                    <p class="text-gray-600 text-sm">Transaction effectuée en quelques secondes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gobot-blue mb-12">
+                Sécurité maximale
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl">🔒</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Cryptage SSL</h3>
+                    <p class="text-gray-600">Toutes vos transactions sont protégées par un cryptage SSL 256 bits.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl">🛡️</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Authentification 2FA</h3>
+                    <p class="text-gray-600">Double authentification pour une sécurité renforcée de vos comptes.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-red-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl">⚡</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Surveillance 24/7</h3>
+                    <p class="text-gray-600">Monitoring constant pour détecter toute activité suspecte.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="hero-section text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Prêt à simplifier vos transactions ?</h2>
+            <p class="text-lg mb-8">Plus de 2 millions de transactions sécurisées chaque mois</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-2xl font-bold">🇧🇯 +229 97970370</div>
+                    <div class="text-sm">Bénin</div>
+                </div>
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-2xl font-bold">🇹🇬 +228 70153434</div>
+                    <div class="text-sm">Togo</div>
+                </div>
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-2xl font-bold">🇨🇮 +225 0717322570</div>
+                    <div class="text-sm">Côte d'Ivoire</div>
+                </div>
+            </div>
+            
+            <button class="bg-white text-gobot-red px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors">
+                💰 Commencer maintenant
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gobot-blue text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">GoBot Mobile Money</h3>
+                    <p class="text-gray-300">Votre partenaire financier de confiance</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Transferts</a></li>
+                        <li><a href="#" class="hover:text-white">Paiement factures</a></li>
+                        <li><a href="#" class="hover:text-white">Crédit express</a></li>
+                        <li><a href="#" class="hover:text-white">Épargne</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Aide 24/7</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Partenaires</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Devenir agent</a></li>
+                        <li><a href="#" class="hover:text-white">API développeurs</a></li>
+                        <li><a href="#" class="hover:text-white">Intégration</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2025 GoBot Mobile Money - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
