@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Events - GoBot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gobot-red': '#CD3446',
+                        'gobot-red-secondary': '#CB2C3F',
+                        'gobot-red-alt': '#CC3143',
+                        'gobot-blue': '#0F2E4A',
+                        'gobot-white': '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .event-card {
+            transition: all 0.3s ease;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0F2E4A 0%, #CD3446 100%);
+        }
+    </style>
+</head>
+<body class="tech-background min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-gobot-blue">
+                        Go<span class="text-gobot-red">Bot</span>
+                    </h1>
+                </div>
+                <div class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Accueil</a>
+                    <a href="live-events.html" class="text-gobot-red font-medium">Live Events</a>
+                    <a href="contact.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-gobot-blue">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg">
+                <a href="index.html" class="block py-2 text-gobot-blue hover:text-gobot-red">Accueil</a>
+                <a href="live-events.html" class="block py-2 text-gobot-red">Live Events</a>
+                <a href="contact.html" class="block py-2 text-gobot-blue hover:text-gobot-red">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="animate-fadeInUp text-4xl md:text-6xl font-bold mb-6 flex items-center justify-center gap-4">
+                <svg class="w-16 h-16 md:w-20 md:h-20" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
+                </svg>
+                LIVE EVENTS
+            </h1>
+            <p class="text-lg md:text-2xl mb-8 max-w-4xl mx-auto opacity-90">
+                Découvrez nos événements live exclusifs et participez à des expériences uniques avec GoBot
+            </p>
+            <div class="flex items-center justify-center space-x-2 text-lg">
+                <span class="animate-pulse">🔴</span>
+                <span>Événements en direct et à venir</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gobot-blue mb-4">Nos Événements Live</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Ne manquez aucun de nos événements exclusifs et vivez des moments inoubliables
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Event 1: Live Fènou Higbé -->
+                <div class="event-card bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="relative">
+                        <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-6xl mb-2">🌍</div>
+                                <div class="text-xl font-bold">Fènou Higbé</div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold flex items-center">
+                            <div class="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></div>
+                            LIVE ACTUEL
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gobot-blue mb-3">Live Fènou Higbé</h3>
+                        <div class="flex items-center text-gray-600 mb-4">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="font-semibold">28 au 31 Août 2025</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Découvrez les produits authentiques béninois en direct depuis Bohicon. 
+                            Échangez avec les artisans et commandez vos produits préférés.
+                        </p>
+                        <div class="space-y-3">
+                            <a href="fenou-higbe-market.html" 
+                               class="block w-full bg-green-500 text-white py-3 px-6 rounded-lg font-semibold text-center hover:bg-green-600 transition-colors">
+                                🔴 Accéder au Live
+                            </a>
+                            <a href="live.html" 
+                               class="block w-full border-2 border-green-500 text-green-500 py-3 px-6 rounded-lg font-semibold text-center hover:bg-green-50 transition-colors">
+                                📺 Voir le Streaming
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 2: Concert Axel Merryl -->
+                <div class="event-card bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="relative">
+                        <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-6xl mb-2">🎤</div>
+                                <div class="text-xl font-bold">Concert Live</div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            BIENTÔT
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gobot-blue mb-3">Live Concert Axel Merryl</h3>
+                        <div class="flex items-center text-gray-600 mb-4">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="font-semibold">13 Septembre 2025</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Concert live exclusif avec Axel Merryl. Une soirée musicale exceptionnelle 
+                            diffusée en direct via GoBot avec interactions en temps réel.
+                        </p>
+                        <div class="space-y-3">
+                            <button class="w-full bg-gray-400 text-white py-3 px-6 rounded-lg font-semibold cursor-not-allowed" disabled>
+                                🕒 Bientôt disponible
+                            </button>
+                            <button onclick="window.open('https://wa.me/22997970370?text=Je%20veux%20être%20notifié%20pour%20le%20concert%20Axel%20Merryl', '_blank')" 
+                                    class="w-full border-2 border-purple-500 text-purple-500 py-3 px-6 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+                                🔔 Me notifier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 3: We Love Eya -->
+                <div class="event-card bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="relative">
+                        <div class="h-48 bg-gradient-to-br from-pink-400 to-red-500 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-6xl mb-2">💕</div>
+                                <div class="text-xl font-bold">We Love Eya</div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 left-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            BIENTÔT
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gobot-blue mb-3">Live We Love Eya</h3>
+                        <div class="flex items-center text-gray-600 mb-4">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="font-semibold">Date à confirmer</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Événement spécial "We Love Eya" - une expérience unique à vivre en direct. 
+                            Plus de détails seront annoncés prochainement.
+                        </p>
+                        <div class="space-y-3">
+                            <button class="w-full bg-gray-400 text-white py-3 px-6 rounded-lg font-semibold cursor-not-allowed" disabled>
+                                🕒 Bientôt disponible
+                            </button>
+                            <button onclick="window.open('https://wa.me/22997970370?text=Je%20veux%20être%20notifié%20pour%20l\'événement%20We%20Love%20Eya', '_blank')" 
+                                    class="w-full border-2 border-pink-500 text-pink-500 py-3 px-6 rounded-lg font-semibold hover:bg-pink-50 transition-colors">
+                                🔔 Me notifier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">📱 Restez connectés avec GoBot</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+                Ne manquez aucun de nos événements live ! Suivez-nous et recevez des notifications 
+                pour tous nos événements exclusifs.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="window.open('https://wa.me/22997970370?text=Je%20veux%20être%20notifié%20de%20tous%20les%20événements%20GoBot', '_blank')" 
+                        class="bg-white text-gobot-red px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all">
+                    📞 Notifications WhatsApp
+                </button>
+                <a href="contact.html" 
+                   class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-gobot-red transition-all">
+                    ✉️ Nous contacter
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gobot-blue text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold mb-4">GoBot</h3>
+                    <p class="text-gray-300">La solution qui pense à tout et surtout à vous !</p>
+                </div>
+                
+                <div class="text-center md:text-left">
+                    <h4 class="font-bold mb-4">Live Events</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="fenou-higbe-market.html" class="hover:text-white transition-colors">Live Fènou Higbé</a></li>
+                        <li><span class="text-gray-400">Concert Axel Merryl (Bientôt)</span></li>
+                        <li><span class="text-gray-400">We Love Eya (Bientôt)</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2025 GoBot - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript pour le menu mobile -->
+    <script>
+        // Menu mobile toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observer tous les éléments avec animation
+        document.querySelectorAll('.event-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
