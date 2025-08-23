@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoBot Booking - Réservations Simplifiées</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gobot-red': '#CD3446',
+                        'gobot-red-secondary': '#CB2C3F',
+                        'gobot-red-alt': '#CC3143',
+                        'gobot-blue': '#0F2E4A',
+                        'gobot-white': '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .booking-card {
+            transition: all 0.3s ease;
+        }
+        
+        .booking-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0F2E4A 0%, #CD3446 100%);
+        }
+        
+        .service-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .booking-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="tech-background min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-gobot-blue">
+                        Go<span class="text-gobot-red">Bot</span>
+                    </h1>
+                </div>
+                <div class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Accueil</a>
+                    <a href="booking.html" class="text-gobot-red font-medium">Booking</a>
+                    <a href="live-events.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Live Events</a>
+                    <a href="contact.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-gobot-blue">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg">
+                <a href="index.html" class="block py-2 text-gobot-blue hover:text-gobot-red">Accueil</a>
+                <a href="booking.html" class="block py-2 text-gobot-red">Booking</a>
+                <a href="live-events.html" class="block py-2 text-gobot-blue hover:text-gobot-red">Live Events</a>
+                <a href="contact.html" class="block py-2 text-gobot-blue hover:text-gobot-red">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="animate-fadeInUp text-4xl md:text-6xl font-bold mb-6">
+                📅 GoBot Booking
+            </h1>
+            <p class="text-lg md:text-2xl mb-8 max-w-4xl mx-auto opacity-90">
+                Réservez facilement vos restaurants, hôtels, taxis et services touristiques en quelques clics avec GoBot
+            </p>
+            <div class="flex items-center justify-center space-x-4 text-lg mb-8">
+                <span class="bg-white/20 px-4 py-2 rounded-full">✨ Simple</span>
+                <span class="bg-white/20 px-4 py-2 rounded-full">⚡ Rapide</span>
+                <span class="bg-white/20 px-4 py-2 rounded-full">🔒 Sécurisé</span>
+            </div>
+            <button onclick="window.location.href='select-country.html?service=booking-general'" 
+                    class="bg-white text-gobot-red px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105">
+                🚀 Commencer à réserver
+            </button>
+        </div>
+    </section>
+
+    <!-- Services de Réservation -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gobot-blue mb-4">Nos Services de Réservation</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Avec GoBot, réservez tous vos services en un seul endroit. Simplicité et efficacité garanties !
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Restaurant Booking -->
+                <div class="booking-card bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="relative">
+                        <div class="h-48 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
+                            <div class="service-icon text-center text-white">
+                                <div class="text-6xl mb-2">🍽️</div>
+                                <div class="text-xl font-bold">Restaurants</div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-bold">
+                            POPULAIRE
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gobot-blue mb-3">Réservation Restaurant</h3>
+                        <p class="text-gray-600 mb-6">
+                            Réservez votre table dans les meilleurs restaurants. Choisissez votre date, heure et nombre de personnes en quelques clics.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">✅</span>
+                                <span>Confirmation instantanée</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">✅</span>
+                                <span>Menus et prix visibles</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">✅</span>
+                                <span>Annulation gratuite</span>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='select-country.html?service=restaurant'" 
+                                class="w-full mt-6 bg-orange-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-orange-600 transition-colors">
+                            📞 Réserver maintenant
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hotel Booking -->
+                <div class="booking-card bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="relative">
+                        <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+                            <div class="service-icon text-center text-white">
+                                <div class="text-6xl mb-2">🏨</div>
+                                <div class="text-xl font-bold">Hôtels</div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-bold">
+                            PREMIUM
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gobot-blue mb-3">Réservation Hôtel</h3>
+                        <p class="text-gray-600 mb-6">
+                            Trouvez et réservez l'hôtel parfait pour votre séjour. Chambres confortables, services inclus et tarifs transparents.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">✅</span>
+                                <span>Large choix d'hôtels</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">✅</span>
+                                <span>Photos et avis clients</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">✅</span>
+                                <span>Meilleurs prix garantis</span>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='select-country.html?service=hotel'" 
+                                class="w-full mt-6 bg-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
+                            📞 Réserver maintenant
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Taxi Booking -->
+                <div class="booking-card bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="relative">
+                        <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
+                            <div class="service-icon text-center text-white">
+                                <div class="text-6xl mb-2">🚕</div>
+                                <div class="text-xl font-bold">Transport</div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-bold">
+                            RAPIDE
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gobot-blue mb-3">Réservation Taxi</h3>
+                        <p class="text-gray-600 mb-6">
+                            Réservez votre transport à l'avance ou en temps réel. Taxis, VTC et transferts aéroport disponibles 24h/24.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">✅</span>
+                                <span>Réservation instantanée</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">✅</span>
+                                <span>Tarifs transparents</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">✅</span>
+                                <span>Suivi en temps réel</span>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='select-country.html?service=taxi'" 
+                                class="w-full mt-6 bg-yellow-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-yellow-600 transition-colors">
+                            📞 Réserver maintenant
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tourism Booking -->
+                <div class="booking-card bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="relative">
+                        <div class="h-48 bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center">
+                            <div class="service-icon text-center text-white">
+                                <div class="text-6xl mb-2">🌍</div>
+                                <div class="text-xl font-bold">Tourisme</div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-bold">
+                            DÉCOUVERTE
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gobot-blue mb-3">Services Touristiques</h3>
+                        <p class="text-gray-600 mb-6">
+                            Découvrez les merveilles locales avec nos guides et excursions. Visites guidées, activités culturelles et aventures.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">✅</span>
+                                <span>Guides expérimentés</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">✅</span>
+                                <span>Circuits personnalisés</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">✅</span>
+                                <span>Expériences authentiques</span>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='select-country.html?service=tourisme'" 
+                                class="w-full mt-6 bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-600 transition-colors">
+                            📞 Réserver maintenant
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Event Spaces -->
+                <div class="booking-card bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="relative">
+                        <div class="h-48 bg-gradient-to-br from-pink-400 to-red-500 flex items-center justify-center">
+                            <div class="service-icon text-center text-white">
+                                <div class="text-6xl mb-2">🎪</div>
+                                <div class="text-xl font-bold">Événements</div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-bold">
+                            EXCLUSIF
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gobot-blue mb-3">Espaces Événementiels</h3>
+                        <p class="text-gray-600 mb-6">
+                            Réservez des salles pour vos événements : mariages, conférences, fêtes privées. Espaces modulables et équipés.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">✅</span>
+                                <span>Salles équipées</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">✅</span>
+                                <span>Service traiteur disponible</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">✅</span>
+                                <span>Organisation complète</span>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='select-country.html?service=evenement'" 
+                                class="w-full mt-6 bg-pink-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-pink-600 transition-colors">
+                            📞 Réserver maintenant
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Wellness Services -->
+                <div class="booking-card bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="relative">
+                        <div class="h-48 bg-gradient-to-br from-purple-400 to-indigo-500 flex items-center justify-center">
+                            <div class="service-icon text-center text-white">
+                                <div class="text-6xl mb-2">💆</div>
+                                <div class="text-xl font-bold">Bien-être</div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-bold">
+                            DÉTENTE
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gobot-blue mb-3">Services Bien-être</h3>
+                        <p class="text-gray-600 mb-6">
+                            Réservez vos moments de détente : spa, massages, soins esthétiques. Prenez soin de vous avec nos partenaires.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">✅</span>
+                                <span>Professionnels certifiés</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">✅</span>
+                                <span>Équipements haut de gamme</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <span class="mr-2">✅</span>
+                                <span>Ambiance relaxante</span>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='select-country.html?service=bien-etre'" 
+                                class="w-full mt-6 bg-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-600 transition-colors">
+                            📞 Réserver maintenant
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pourquoi GoBot Booking -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gobot-blue mb-4">Pourquoi choisir GoBot Booking ?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Une expérience de réservation simplifiée et sécurisée pour tous vos besoins
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gobot-red/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl">⚡</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">Réservation Instantanée</h3>
+                    <p class="text-gray-600">
+                        Confirmez vos réservations en quelques secondes via WhatsApp. Simple et efficace.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gobot-red/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl">🔒</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">Sécurité Garantie</h3>
+                    <p class="text-gray-600">
+                        Vos données et paiements sont protégés. Réservez en toute confiance avec GoBot.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gobot-red/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl">💬</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">Support 24/7</h3>
+                    <p class="text-gray-600">
+                        Notre équipe est disponible à tout moment pour vous assister dans vos réservations.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gobot-red/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl">💰</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">Meilleurs Prix</h3>
+                    <p class="text-gray-600">
+                        Bénéficiez de tarifs préférentiels et d'offres exclusives avec nos partenaires.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comment ça marche -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gobot-blue mb-4">Comment ça marche ?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Réservez en 3 étapes simples avec GoBot
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="text-center">
+                    <div class="relative mb-8">
+                        <div class="w-24 h-24 bg-gobot-red rounded-full flex items-center justify-center mx-auto">
+                            <span class="text-3xl text-white font-bold">1</span>
+                        </div>
+                        <div class="absolute top-12 left-1/2 transform -translate-x-1/2 w-full h-1 bg-gobot-red/20 hidden md:block md:w-32 md:left-full"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">🎯 Choisissez votre service</h3>
+                    <p class="text-gray-600">
+                        Sélectionnez le type de réservation : restaurant, hôtel, taxi, tourisme ou bien-être.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="relative mb-8">
+                        <div class="w-24 h-24 bg-gobot-red rounded-full flex items-center justify-center mx-auto">
+                            <span class="text-3xl text-white font-bold">2</span>
+                        </div>
+                        <div class="absolute top-12 left-1/2 transform -translate-x-1/2 w-full h-1 bg-gobot-red/20 hidden md:block md:w-32 md:left-full"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">📱 Contactez via WhatsApp</h3>
+                    <p class="text-gray-600">
+                        Cliquez sur "Réserver maintenant" et exprimez vos besoins directement sur WhatsApp.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="relative mb-8">
+                        <div class="w-24 h-24 bg-gobot-red rounded-full flex items-center justify-center mx-auto">
+                            <span class="text-3xl text-white font-bold">3</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">✅ Confirmez votre réservation</h3>
+                    <p class="text-gray-600">
+                        Recevez votre confirmation instantanée et profitez de votre service réservé.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">🚀 Prêt à simplifier vos réservations ?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+                Rejoignez des milliers d'utilisateurs qui font confiance à GoBot pour leurs réservations. 
+                Simple, rapide et sécurisé !
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="window.location.href='select-country.html?service=booking-general'" 
+                        class="bg-white text-gobot-red px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all">
+                    📞 Commencer maintenant
+                </button>
+                <a href="contact.html" 
+                   class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-gobot-red transition-all">
+                    📧 En savoir plus
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gobot-blue text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold mb-4">GoBot Booking</h3>
+                    <p class="text-gray-300 mb-4">Votre assistant intelligent pour toutes vos réservations</p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <span class="text-2xl">📅</span>
+                        <span class="text-2xl">🏨</span>
+                        <span class="text-2xl">🚕</span>
+                        <span class="text-2xl">🌍</span>
+                    </div>
+                </div>
+                
+                <div class="text-center md:text-left">
+                    <h4 class="font-bold mb-4">Services de Réservation</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>🍽️ Restaurants</li>
+                        <li>🏨 Hôtels</li>
+                        <li>🚕 Transport</li>
+                        <li>🌍 Tourisme</li>
+                        <li>🎪 Événements</li>
+                        <li>💆 Bien-être</li>
+                    </ul>
+                </div>
+                
+                <div class="text-center md:text-left">
+                    <h4 class="font-bold mb-4">Contact Rapide</h4>
+                    <div class="space-y-3">
+                        <a href="https://wa.me/22997970370" target="_blank" 
+                           class="flex items-center justify-center md:justify-start text-gray-300 hover:text-white transition-colors">
+                            <span class="mr-2">📱</span>
+                            <span>WhatsApp: +229 97970370</span>
+                        </a>
+                        <a href="mailto:booking@gobot.bj" 
+                           class="flex items-center justify-center md:justify-start text-gray-300 hover:text-white transition-colors">
+                            <span class="mr-2">📧</span>
+                            <span>booking@gobot.bj</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2025 GoBot - Tous droits réservés | Réservations simplifiées</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Menu mobile toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observer tous les éléments avec animation
+        document.querySelectorAll('.booking-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Animation des statistiques au scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-fadeInUp');
+            elements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    el.classList.add('animate-fadeInUp');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+</html>

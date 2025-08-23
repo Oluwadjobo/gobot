@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choisir votre pays - GoBot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gobot-red': '#CD3446',
+                        'gobot-red-secondary': '#CB2C3F',
+                        'gobot-red-alt': '#CC3143',
+                        'gobot-blue': '#0F2E4A',
+                        'gobot-white': '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .country-card {
+            transition: all 0.3s ease;
+        }
+        
+        .country-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0F2E4A 0%, #CD3446 100%);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+    </style>
+</head>
+<body class="tech-background min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-gobot-blue">
+                        Go<span class="text-gobot-red">Bot</span>
+                    </h1>
+                </div>
+                <div class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Accueil</a>
+                    <a href="booking.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Booking</a>
+                    <a href="live-events.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Live Events</a>
+                    <a href="contact.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-gobot-blue">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg">
+                <a href="index.html" class="block py-2 text-gobot-blue hover:text-gobot-red">Accueil</a>
+                <a href="booking.html" class="block py-2 text-gobot-blue hover:text-gobot-red">Booking</a>
+                <a href="live-events.html" class="block py-2 text-gobot-blue hover:text-gobot-red">Live Events</a>
+                <a href="contact.html" class="block py-2 text-gobot-blue hover:text-gobot-red">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="animate-fadeInUp text-3xl md:text-5xl font-bold mb-6">
+                🌍 Choisissez votre pays
+            </h1>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto opacity-90">
+                Sélectionnez le pays depuis lequel vous souhaitez être contacté pour votre réservation
+            </p>
+            <div class="flex items-center justify-center space-x-2 text-lg">
+                <span class="pulse-animation">📱</span>
+                <span>Nous vous contacterons directement sur WhatsApp</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selection des Pays -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gobot-blue mb-4">Nos bureaux disponibles</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Choisissez le bureau GoBot le plus proche de vous pour un service personnalisé
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- Bénin -->
+                <div class="country-card bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="relative">
+                        <div class="h-32 bg-gradient-to-br from-green-400 to-yellow-500 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-5xl mb-2">🇧🇯</div>
+                                <div class="text-lg font-bold">Bénin</div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                            PRINCIPAL
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gobot-blue mb-3 text-center">Bureau Principal</h3>
+                        <div class="space-y-2 mb-4 text-center">
+                            <div class="text-gray-600 font-mono text-sm">+229 97970370</div>
+                            <div class="text-gray-600 text-sm">contact@gobot.bj</div>
+                            <div class="text-gray-600 text-xs">Cotonou, Bénin</div>
+                        </div>
+                        <button onclick="openWhatsApp('22997970370', getServiceFromUrl())" 
+                                class="w-full bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center">
+                            <span class="mr-2">💬</span>
+                            Contacter le Bénin
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Togo -->
+                <div class="country-card bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="relative">
+                        <div class="h-32 bg-gradient-to-br from-yellow-400 to-red-500 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-5xl mb-2">🇹🇬</div>
+                                <div class="text-lg font-bold">Togo</div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                            ACTIF
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gobot-blue mb-3 text-center">Bureau Lomé</h3>
+                        <div class="space-y-2 mb-4 text-center">
+                            <div class="text-gray-600 font-mono text-sm">+228 70153434</div>
+                            <div class="text-gray-600 text-sm">contact@gobot.tg</div>
+                            <div class="text-gray-600 text-xs">Lomé, Togo</div>
+                        </div>
+                        <button onclick="openWhatsApp('22870153434', getServiceFromUrl())" 
+                                class="w-full bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center">
+                            <span class="mr-2">💬</span>
+                            Contacter le Togo
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Côte d'Ivoire -->
+                <div class="country-card bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="relative">
+                        <div class="h-32 bg-gradient-to-br from-orange-400 to-green-500 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-5xl mb-2">🇨🇮</div>
+                                <div class="text-lg font-bold">Côte d'Ivoire</div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                            ACTIF
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gobot-blue mb-3 text-center">Bureau Abidjan</h3>
+                        <div class="space-y-2 mb-4 text-center">
+                            <div class="text-gray-600 font-mono text-sm">+225 0717322570</div>
+                            <div class="text-gray-600 text-sm">contact@gobot.ci</div>
+                            <div class="text-gray-600 text-xs">Abidjan, Côte d'Ivoire</div>
+                        </div>
+                        <button onclick="openWhatsApp('2250717322570', getServiceFromUrl())" 
+                                class="w-full bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center">
+                            <span class="mr-2">💬</span>
+                            Contacter la Côte d'Ivoire
+                        </button>
+                    </div>
+                </div>
+
+                <!-- France -->
+                <div class="country-card bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="relative">
+                        <div class="h-32 bg-gradient-to-br from-blue-400 to-red-500 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-5xl mb-2">🇫🇷</div>
+                                <div class="text-lg font-bold">France</div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                            NOUVEAU
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gobot-blue mb-3 text-center">Bureau Paris</h3>
+                        <div class="space-y-2 mb-4 text-center">
+                            <div class="text-gray-600 font-mono text-sm">+33 761419447</div>
+                            <div class="text-gray-600 text-sm">contact@gobot.fr</div>
+                            <div class="text-gray-600 text-xs">Paris, France</div>
+                        </div>
+                        <button onclick="openWhatsApp('33761419447', getServiceFromUrl())" 
+                                class="w-full bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center">
+                            <span class="mr-2">💬</span>
+                            Contacter la France
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Information sur le service -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-gobot-blue mb-6">📞 Que se passe-t-il après votre sélection ?</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gobot-red/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">📱</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gobot-blue mb-2">1. Contact immédiat</h3>
+                        <p class="text-gray-600">WhatsApp s'ouvre automatiquement avec votre demande pré-remplie</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gobot-red/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">👨‍💼</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gobot-blue mb-2">2. Conseiller dédié</h3>
+                        <p class="text-gray-600">Un conseiller GoBot du pays sélectionné vous répond rapidement</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gobot-red/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">✅</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gobot-blue mb-2">3. Réservation confirmée</h3>
+                        <p class="text-gray-600">Votre réservation est traitée et confirmée en quelques minutes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section retour -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">🔙 Vous voulez revenir en arrière ?</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">
+                Pas de problème ! Vous pouvez retourner à la page précédente pour voir nos autres services.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="history.back()" 
+                        class="bg-white text-gobot-red px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all">
+                    ← Retour à la page précédente
+                </button>
+                <a href="index.html" 
+                   class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-gobot-red transition-all">
+                    🏠 Retour à l'accueil
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gobot-blue text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold mb-4">GoBot</h3>
+                    <p class="text-gray-300">Votre assistant intelligent disponible dans 4 pays</p>
+                </div>
+                
+                <div class="text-center md:text-left">
+                    <h4 class="font-bold mb-4">Nos Bureaux</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>🇧🇯 Bénin: +229 97970370</li>
+                        <li>🇹🇬 Togo: +228 70153434</li>
+                        <li>🇨🇮 Côte d'Ivoire: +225 0717322570</li>
+                        <li>🇫🇷 France: +33 761419447</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2025 GoBot - Tous droits réservés | Service multi-pays</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Menu mobile toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Fonction pour récupérer le service depuis l'URL
+        function getServiceFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const service = urlParams.get('service');
+            
+            const serviceMessages = {
+                'restaurant': 'Je veux réserver une table au restaurant via GoBot',
+                'hotel': 'Je veux réserver une chambre d\'hôtel via GoBot',
+                'taxi': 'Je veux réserver un taxi via GoBot',
+                'tourisme': 'Je veux réserver des services touristiques via GoBot',
+                'evenement': 'Je veux réserver un espace événementiel via GoBot',
+                'bien-etre': 'Je veux réserver des services bien-être via GoBot',
+                'booking-general': 'Je veux découvrir GoBot Booking',
+                'live-events': 'Je veux être notifié de tous les événements GoBot',
+                'general': 'Je veux découvrir les services GoBot'
+            };
+            
+            return serviceMessages[service] || 'Je veux découvrir les services GoBot';
+        }
+
+        // Fonction pour ouvrir WhatsApp avec le message personnalisé
+        function openWhatsApp(phoneNumber, message) {
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observer tous les éléments avec animation
+        document.querySelectorAll('.country-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Afficher le service demandé si présent dans l'URL
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const service = urlParams.get('service');
+            
+            if (service) {
+                const serviceElement = document.createElement('div');
+                serviceElement.className = 'fixed top-20 right-4 bg-gobot-red text-white px-4 py-2 rounded-lg shadow-lg z-50';
+                serviceElement.innerHTML = `
+                    <div class="flex items-center">
+                        <span class="mr-2">🎯</span>
+                        <span class="text-sm">Service: ${getServiceName(service)}</span>
+                        <button onclick="this.parentElement.parentElement.remove()" class="ml-2 text-white hover:text-gray-200">×</button>
+                    </div>
+                `;
+                document.body.appendChild(serviceElement);
+                
+                // Retirer automatiquement après 5 secondes
+                setTimeout(() => {
+                    if (serviceElement.parentElement) {
+                        serviceElement.remove();
+                    }
+                }, 5000);
+            }
+        });
+
+        // Fonction pour obtenir le nom du service
+        function getServiceName(service) {
+            const serviceNames = {
+                'restaurant': 'Restaurant',
+                'hotel': 'Hôtel',
+                'taxi': 'Transport',
+                'tourisme': 'Tourisme',
+                'evenement': 'Événement',
+                'bien-etre': 'Bien-être',
+                'booking-general': 'Booking',
+                'live-events': 'Live Events',
+                'general': 'Général'
+            };
+            
+            return serviceNames[service] || 'Inconnu';
+        }
+    </script>
+</body>
+</html>
