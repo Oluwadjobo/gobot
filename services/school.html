@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoBot School - Formation et Éducation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gobot-red': '#CD3446',
+                        'gobot-red-secondary': '#CB2C3F',
+                        'gobot-red-alt': '#CC3143',
+                        'gobot-blue': '#0F2E4A',
+                        'gobot-white': '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="tech-background">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold text-gobot-blue">
+                        Go<span class="text-gobot-red">Bot</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Accueil</a>
+                    <a href="food.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">GoBot Food</a>
+                    <a href="event.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">GoBot Event</a>
+                    <a href="mobile-money.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Mobile Money</a>
+                    <a href="assurance.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Assurance</a>
+                    <a href="school.html" class="text-gobot-red font-medium">GoBot School</a>
+                    <a href="marketplace.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Marketplace</a>
+                    <a href="../contact.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold mb-6">📚 GoBot School</h1>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                Développez vos compétences avec nos formations en ligne personnalisées. 
+                De l'informatique aux langues, en passant par l'entrepreneuriat, apprenez à votre rythme.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-gobot-red px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors">
+                    📖 Explorer les cours
+                </button>
+                <button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-gobot-red transition-colors">
+                    🎓 Devenir formateur
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="text-3xl font-bold text-gobot-red mb-2">5,000+</div>
+                    <div class="text-gray-600">Étudiants actifs</div>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="text-3xl font-bold text-gobot-red mb-2">200+</div>
+                    <div class="text-gray-600">Cours disponibles</div>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="text-3xl font-bold text-gobot-red mb-2">50+</div>
+                    <div class="text-gray-600">Formateurs experts</div>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="text-3xl font-bold text-gobot-red mb-2">95%</div>
+                    <div class="text-gray-600">Taux de satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Categories -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gobot-blue mb-4">Nos Domaines de Formation</h2>
+                <p class="text-xl text-gray-600">Choisissez parmi notre large gamme de formations</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">💻</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">Informatique & Tech</h3>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li>• Développement Web & Mobile</li>
+                        <li>• Data Science & IA</li>
+                        <li>• Cybersécurité</li>
+                        <li>• Design Graphique</li>
+                        <li>• Marketing Digital</li>
+                    </ul>
+                    <div class="text-gobot-red font-semibold">À partir de 25,000 FCFA/mois</div>
+                </div>
+
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">🌍</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">Langues & Communication</h3>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li>• Anglais professionnel</li>
+                        <li>• Français des affaires</li>
+                        <li>• Chinois commercial</li>
+                        <li>• Communication orale</li>
+                        <li>• Rédaction professionnelle</li>
+                    </ul>
+                    <div class="text-gobot-red font-semibold">À partir de 15,000 FCFA/mois</div>
+                </div>
+
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">Business & Entrepreneuriat</h3>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li>• Création d'entreprise</li>
+                        <li>• Gestion financière</li>
+                        <li>• Leadership & Management</li>
+                        <li>• Plan d'affaires</li>
+                        <li>• E-commerce</li>
+                    </ul>
+                    <div class="text-gobot-red font-semibold">À partir de 35,000 FCFA/mois</div>
+                </div>
+
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">🎨</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">Arts & Créativité</h3>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li>• Photographie professionnelle</li>
+                        <li>• Montage vidéo</li>
+                        <li>• Musique & Production</li>
+                        <li>• Écriture créative</li>
+                        <li>• Design d'intérieur</li>
+                    </ul>
+                    <div class="text-gobot-red font-semibold">À partir de 20,000 FCFA/mois</div>
+                </div>
+
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">⚖️</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">Droit & Juridique</h3>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li>• Droit des affaires</li>
+                        <li>• Droit du travail</li>
+                        <li>• Propriété intellectuelle</li>
+                        <li>• Contrats commerciaux</li>
+                        <li>• Médiation & Arbitrage</li>
+                    </ul>
+                    <div class="text-gobot-red font-semibold">À partir de 40,000 FCFA/mois</div>
+                </div>
+
+                <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">🏥</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-3">Santé & Bien-être</h3>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li>• Premiers secours</li>
+                        <li>• Nutrition & Diététique</li>
+                        <li>• Coaching personnel</li>
+                        <li>• Gestion du stress</li>
+                        <li>• Yoga & Méditation</li>
+                    </ul>
+                    <div class="text-gobot-red font-semibold">À partir de 18,000 FCFA/mois</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Process -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gobot-blue mb-4">Comment ça marche ?</h2>
+                <p class="text-xl text-gray-600">Un processus simple en 5 étapes</p>
+            </div>
+
+            <div class="grid md:grid-cols-5 gap-6">
+                <div class="step-card text-center p-6 rounded-2xl">
+                    <div class="w-12 h-12 bg-gobot-red text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">1</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">📋 Inscription</h3>
+                    <p class="text-gray-600 text-sm">Créez votre compte et choisissez vos domaines d'intérêt</p>
+                </div>
+
+                <div class="step-card text-center p-6 rounded-2xl">
+                    <div class="w-12 h-12 bg-gobot-red text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">2</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">🎯 Évaluation</h3>
+                    <p class="text-gray-600 text-sm">Test de niveau pour personnaliser votre parcours</p>
+                </div>
+
+                <div class="step-card text-center p-6 rounded-2xl">
+                    <div class="w-12 h-12 bg-gobot-red text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">3</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">📚 Formation</h3>
+                    <p class="text-gray-600 text-sm">Cours interactifs, vidéos, exercices pratiques</p>
+                </div>
+
+                <div class="step-card text-center p-6 rounded-2xl">
+                    <div class="w-12 h-12 bg-gobot-red text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">4</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">✅ Évaluation</h3>
+                    <p class="text-gray-600 text-sm">Tests et projets pour valider vos acquis</p>
+                </div>
+
+                <div class="step-card text-center p-6 rounded-2xl">
+                    <div class="w-12 h-12 bg-gobot-red text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">5</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">🎓 Certification</h3>
+                    <p class="text-gray-600 text-sm">Obtenez vos certificats reconnus</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gobot-blue mb-4">Pourquoi choisir GoBot School ?</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gobot-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">⏰</span>
+                    </div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Flexibilité totale</h3>
+                    <p class="text-gray-600 text-sm">Apprenez à votre rythme, 24h/24</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gobot-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">👨‍🏫</span>
+                    </div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Experts qualifiés</h3>
+                    <p class="text-gray-600 text-sm">Formateurs certifiés et expérimentés</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gobot-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🎯</span>
+                    </div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Suivi personnalisé</h3>
+                    <p class="text-gray-600 text-sm">Accompagnement individuel adapté</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gobot-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🏆</span>
+                    </div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Certifications</h3>
+                    <p class="text-gray-600 text-sm">Diplômes reconnus sur le marché</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="hero-section text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Prêt à apprendre ?</h2>
+            <p class="text-lg mb-8">Plus de 5,000 étudiants ont déjà transformé leur carrière</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-2xl font-bold">🇧🇯 *144#</div>
+                    <div class="text-sm">Bénin</div>
+                </div>
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-2xl font-bold">🇹🇬 *155#</div>
+                    <div class="text-sm">Togo</div>
+                </div>
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-2xl font-bold">🇨🇮 *166#</div>
+                    <div class="text-sm">Côte d'Ivoire</div>
+                </div>
+            </div>
+            
+            <button class="bg-white text-gobot-red px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors">
+                🎓 Commencer maintenant
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gobot-blue text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">GoBot School</h3>
+                    <p class="text-gray-300">Votre partenaire pour l'éducation et le développement professionnel</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Formations</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Informatique</a></li>
+                        <li><a href="#" class="hover:text-white">Langues</a></li>
+                        <li><a href="#" class="hover:text-white">Business</a></li>
+                        <li><a href="#" class="hover:text-white">Arts</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Aide aux étudiants</a></li>
+                        <li><a href="../contact.html" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white">Devenir formateur</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">GoBot Services</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="food.html" class="hover:text-white">GoBot Food</a></li>
+                        <li><a href="event.html" class="hover:text-white">GoBot Event</a></li>
+                        <li><a href="mobile-money.html" class="hover:text-white">Mobile Money</a></li>
+                        <li><a href="marketplace.html" class="hover:text-white">Marketplace</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2025 GoBot School - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

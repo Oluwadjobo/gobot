@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoBot Event - Organisez vos événements</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gobot-red': '#CD3446',
+                        'gobot-red-secondary': '#CB2C3F',
+                        'gobot-red-alt': '#CC3143',
+                        'gobot-blue': '#0F2E4A',
+                        'gobot-white': '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="tech-background">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold text-gobot-blue">
+                        Go<span class="text-gobot-red">Bot</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Accueil</a>
+                    <a href="food.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">GoBot Food</a>
+                    <a href="event.html" class="text-gobot-red font-medium">GoBot Event</a>
+                    <a href="mobile-money.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Mobile Money</a>
+                    <a href="assurance.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Assurance</a>
+                    <a href="../contact.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center mb-6">
+                <span class="text-6xl mr-4">🎉</span>
+                <h1 class="text-5xl font-bold">GoBot Event</h1>
+            </div>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Organisez vos événements sans stress. Mariages, anniversaires, conférences... nous nous occupons de tout !
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="btn-primary text-white px-8 py-4 rounded-xl font-semibold text-lg">
+                    🎪 Organiser un événement
+                </button>
+                <button class="bg-white text-gobot-red px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors">
+                    💼 Devenir prestataire
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gobot-blue mb-12">
+                Nos services événementiels
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">💒</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Mariages</h3>
+                    <p class="text-gray-600 mb-4">
+                        Organisation complète de votre mariage de rêve. Décoration, traiteur, musique, photographie...
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>✓ Planification complète</li>
+                        <li>✓ Coordination le jour J</li>
+                        <li>✓ Gestion des prestataires</li>
+                        <li>✓ Décoration personnalisée</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">🎂</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Anniversaires</h3>
+                    <p class="text-gray-600 mb-4">
+                        Fêtes d'anniversaire mémorables pour petits et grands. Thématiques et animations sur mesure.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>✓ Thèmes personnalisés</li>
+                        <li>✓ Animations enfants/adultes</li>
+                        <li>✓ Gâteaux et buffets</li>
+                        <li>✓ Décoration thématique</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">🏢</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Événements d'entreprise</h3>
+                    <p class="text-gray-600 mb-4">
+                        Conférences, séminaires, lancements de produits. Organisation professionnelle garantie.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>✓ Gestion logistique</li>
+                        <li>✓ Support technique</li>
+                        <li>✓ Catering professionnel</li>
+                        <li>✓ Documentation événement</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">🎓</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Cérémonies</h3>
+                    <p class="text-gray-600 mb-4">
+                        Baptêmes, remises de diplômes, inaugurations. Moments solennels organisés avec soin.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>✓ Protocole respecté</li>
+                        <li>✓ Sonorisation</li>
+                        <li>✓ Captation vidéo</li>
+                        <li>✓ Réception organisée</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">🎭</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Spectacles & Concerts</h3>
+                    <p class="text-gray-600 mb-4">
+                        Organisation de spectacles, concerts et événements culturels. De l'intime au grand public.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>✓ Régie technique</li>
+                        <li>✓ Sécurité événement</li>
+                        <li>✓ Billetterie</li>
+                        <li>✓ Promotion</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">🏆</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Événements sportifs</h3>
+                    <p class="text-gray-600 mb-4">
+                        Tournois, compétitions, événements sportifs. Logistique et coordination parfaites.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>✓ Terrain & équipements</li>
+                        <li>✓ Arbitrage</li>
+                        <li>✓ Chronométrage</li>
+                        <li>✓ Remise des prix</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gobot-blue mb-12">
+                Comment organiser votre événement ?
+            </h2>
+            
+            <div class="grid md:grid-cols-5 gap-6">
+                <div class="step-card bg-gray-50 p-6 rounded-2xl text-center">
+                    <div class="bg-gobot-red text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Contactez-nous</h3>
+                    <p class="text-gray-600 text-sm">Appelez-nous au numéro de votre pays</p>
+                </div>
+                
+                <div class="step-card bg-gray-50 p-6 rounded-2xl text-center">
+                    <div class="bg-gobot-red text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Consultation</h3>
+                    <p class="text-gray-600 text-sm">Définissons ensemble vos besoins et budget</p>
+                </div>
+                
+                <div class="step-card bg-gray-50 p-6 rounded-2xl text-center">
+                    <div class="bg-gobot-red text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Planification</h3>
+                    <p class="text-gray-600 text-sm">Élaboration du plan détaillé de votre événement</p>
+                </div>
+                
+                <div class="step-card bg-gray-50 p-6 rounded-2xl text-center">
+                    <div class="bg-gobot-red text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Préparation</h3>
+                    <p class="text-gray-600 text-sm">Coordination de tous les prestataires</p>
+                </div>
+                
+                <div class="step-card bg-gray-50 p-6 rounded-2xl text-center">
+                    <div class="bg-gobot-red text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">5</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Événement</h3>
+                    <p class="text-gray-600 text-sm">Supervision complète le jour J</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gobot-blue mb-12">
+                Nos formules
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-gray-200">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gobot-blue mb-2">Essentiel</h3>
+                        <div class="text-3xl font-bold text-gobot-red mb-4">50 000 FCFA</div>
+                        <p class="text-gray-600 mb-6">Pour les petits événements (jusqu'à 50 personnes)</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Planification de base</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Coordination jour J (4h)</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Liste de prestataires</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Support téléphonique</li>
+                    </ul>
+                    <button class="w-full btn-primary text-white py-3 px-6 rounded-xl">Choisir Essentiel</button>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-gobot-red relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gobot-red text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        Plus populaire
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gobot-blue mb-2">Premium</h3>
+                        <div class="text-3xl font-bold text-gobot-red mb-4">150 000 FCFA</div>
+                        <p class="text-gray-600 mb-6">Pour les événements moyens (51-200 personnes)</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Planification complète</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Coordination jour J (8h)</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Gestion des prestataires</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Décoration incluse</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Support 24/7</li>
+                    </ul>
+                    <button class="w-full btn-primary text-white py-3 px-6 rounded-xl">Choisir Premium</button>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-gray-200">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gobot-blue mb-2">Luxe</h3>
+                        <div class="text-3xl font-bold text-gobot-red mb-4">500 000 FCFA</div>
+                        <p class="text-gray-600 mb-6">Pour les grands événements (200+ personnes)</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Service complet VIP</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Équipe dédiée</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Prestataires premium</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Décoration haut de gamme</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span>Concierge personnel</li>
+                    </ul>
+                    <button class="w-full btn-primary text-white py-3 px-6 rounded-xl">Choisir Luxe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="hero-section text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Prêt à organiser votre événement ?</h2>
+            <p class="text-lg mb-8">Plus de 1000 événements organisés avec succès</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-2xl font-bold">🇧🇯 *144#</div>
+                    <div class="text-sm">Bénin</div>
+                </div>
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-2xl font-bold">🇹🇬 *155#</div>
+                    <div class="text-sm">Togo</div>
+                </div>
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-2xl font-bold">🇨🇮 *166#</div>
+                    <div class="text-sm">Côte d'Ivoire</div>
+                </div>
+            </div>
+            
+            <button class="bg-white text-gobot-red px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors">
+                🎉 Organiser mon événement
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gobot-blue text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">GoBot Event</h3>
+                    <p class="text-gray-300">Vos événements, notre expertise</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Mariages</a></li>
+                        <li><a href="#" class="hover:text-white">Entreprise</a></li>
+                        <li><a href="#" class="hover:text-white">Anniversaires</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Devis gratuit</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Partenaires</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Devenir prestataire</a></li>
+                        <li><a href="#" class="hover:text-white">Photographes</a></li>
+                        <li><a href="#" class="hover:text-white">Traiteurs</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2025 GoBot Event - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

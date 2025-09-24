@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - GoBot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gobot-red': '#CD3446',
+                        'gobot-red-secondary': '#CB2C3F',
+                        'gobot-red-alt': '#CC3143',
+                        'gobot-blue': '#0F2E4A',
+                        'gobot-white': '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="tech-background">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-gobot-blue">
+                        Go<span class="text-gobot-red">Bot</span>
+                    </a>
+                </div>
+                <div class="hidden lg:flex space-x-6">
+                    <a href="index.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Accueil</a>
+                    <a href="flying.html" class="flex items-center gap-2 px-4 py-2 rounded-xl font-medium text-white bg-gradient-to-r from-gobot-blue to-gobot-red shadow hover:from-gobot-red hover:to-gobot-blue transition-all">
+                        <span class="text-lg">✈️</span>
+                        <span>Flying with GoBot</span>
+                    </a>
+                    <a href="contact.html" class="text-gobot-red font-medium">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-gobot-blue">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg">
+                <a href="index.html" class="block py-2 text-gobot-blue hover:text-gobot-red">Accueil</a>
+                <a href="flying.html" class="block py-2 text-white bg-gradient-to-r from-gobot-blue to-gobot-red rounded-xl my-2 text-center font-medium shadow hover:from-gobot-red hover:to-gobot-blue transition-all">
+                    ✈️ Flying with GoBot
+                </a>
+                <a href="contact.html" class="block py-2 text-gobot-red">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-12">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-white mb-4">Contactez-nous</h1>
+            <p class="text-xl text-white opacity-90 max-w-2xl mx-auto">
+                Une question ? Un projet ? Notre équipe est là pour vous accompagner
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <!-- Contact Form -->
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gobot-blue mb-6">Envoyez-nous un message</h2>
+                
+                <form id="contact-form" class="contact-form space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gobot-blue mb-2">Prénom *</label>
+                            <input type="text" id="firstName" name="firstName" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-gobot-red transition-colors">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-gobot-blue mb-2">Nom *</label>
+                            <input type="text" id="lastName" name="lastName" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-gobot-red transition-colors">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gobot-blue mb-2">Email *</label>
+                        <input type="email" id="email" name="email" required 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-gobot-red transition-colors">
+                    </div>
+                    
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gobot-blue mb-2">Téléphone *</label>
+                        <input type="tel" id="phone" name="phone" required 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-gobot-red transition-colors">
+                    </div>
+                    
+                    <div>
+                        <label for="country" class="block text-sm font-medium text-gobot-blue mb-2">Pays *</label>
+                        <select id="country" name="country" required 
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-gobot-red transition-colors">
+                            <option value="">Sélectionner votre pays</option>
+                            <option value="benin">🇧🇯 Bénin</option>
+                            <option value="togo">🇹🇬 Togo</option>
+                            <option value="cote-ivoire">🇨🇮 Côte d'Ivoire</option>
+                            <option value="france">🇫🇷 France</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="service" class="block text-sm font-medium text-gobot-blue mb-2">Service d'intérêt</label>
+                        <select id="service" name="service" 
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-gobot-red transition-colors">
+                            <option value="">Sélectionner un service</option>
+                            <option value="food">🍽️ GoBot Food</option>
+                            <option value="event">🎉 GoBot Event</option>
+                            <option value="mobile-money">💰 GoBot Mobile Money</option>
+                            <option value="assurance">🛡️ GoBot Assurance</option>
+                            <option value="school">📚 GoBot School</option>
+                            <option value="marketplace">🛒 GoBot Marketplace</option>
+                            <option value="medical">🏥 GoBot Médical</option>
+                            <option value="secure-sim">🔐 GoBot Secure SIM</option>
+                            <option value="tourisme">🌍 GoBot Tourisme</option>
+                            <option value="wallet">💳 GoBot Wallet</option>
+                            <option value="partnership">🤝 Partenariat</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gobot-blue mb-2">Sujet *</label>
+                        <input type="text" id="subject" name="subject" required 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-gobot-red transition-colors">
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gobot-blue mb-2">Message *</label>
+                        <textarea id="message" name="message" rows="5" required 
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-gobot-red transition-colors resize-vertical"></textarea>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <input type="checkbox" id="consent" name="consent" required 
+                               class="w-4 h-4 text-gobot-red bg-gray-100 border-gray-300 rounded focus:ring-gobot-red focus:ring-2">
+                        <label for="consent" class="ml-2 block text-sm text-gray-600">
+                            J'accepte que mes données soient utilisées pour me recontacter *
+                        </label>
+                    </div>
+                    
+                    <button type="submit" id="submit-btn" 
+                            class="w-full btn-primary text-white font-semibold py-4 px-6 rounded-xl hover:shadow-lg transition-all">
+                        📧 Envoyer le message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="space-y-8">
+                <!-- Contact Methods -->
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h2 class="text-2xl font-bold text-gobot-blue mb-6 flex items-center">
+                        <span class="text-gobot-red mr-2">📞</span>
+                        Nos coordonnées
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gobot-red/10 p-3 rounded-lg">
+                                <span class="text-gobot-red text-xl">📱</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gobot-blue mb-1">Numéros</h3>
+                                <div class="space-y-1 text-gray-600">
+                                    <p>🇧🇯 Bénin : <span class="font-mono text-gobot-red">+229 97970370</span></p>
+                                    <p>�� Côte d'Ivoire : <span class="font-mono text-gobot-red">+225 0717322570</span></p>
+                                    <p>�� Togo : <span class="font-mono text-gobot-red">+228 70153434</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gobot-red/10 p-3 rounded-lg">
+                                <span class="text-gobot-red text-xl">📧</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gobot-blue mb-1">Email</h3>
+                                <div class="space-y-1 text-gray-600">
+                                    <p>🇧🇯 Bénin : <span class="text-gobot-red">contact@gobot.bj</span></p>
+                                    <p>🇹🇬 Togo : <span class="text-gobot-red">contact@gobot.bj</span></p>
+                                    <p>🇨🇮 Côte d'Ivoire : <span class="text-gobot-red">contact@gobot.ci</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gobot-red/10 p-3 rounded-lg">
+                                <span class="text-gobot-red text-xl">🏢</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gobot-blue mb-1">Siège social</h3>
+                                <p class="text-gray-600">
+                                    Cotonou, Bénin<br>
+                                    Zone industrielle de Godomey
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gobot-red/10 p-3 rounded-lg">
+                                <span class="text-gobot-red text-xl">⏰</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gobot-blue mb-1">Horaires</h3>
+                                <div class="text-gray-600">
+                                    <p>Lundi - Vendredi : 8h - 18h</p>
+                                    <p>Samedi : 9h - 15h</p>
+                                    <p>Dimanche : Fermé</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h2 class="text-2xl font-bold text-gobot-blue mb-6 flex items-center">
+                        <span class="text-gobot-red mr-2">❓</span>
+                        Questions fréquentes
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="border-b border-gray-200 pb-4">
+                            <h3 class="font-semibold text-gobot-blue mb-2">Comment utiliser GoBot ?</h3>
+                            <p class="text-gray-600 text-sm">
+                                Appelez simplement le numéro de votre pays et notre équipe vous guidera.
+                            </p>
+                        </div>
+                        
+                        <div class="border-b border-gray-200 pb-4">
+                            <h3 class="font-semibold text-gobot-blue mb-2">GoBot est-il gratuit ?</h3>
+                            <p class="text-gray-600 text-sm">
+                                L'appel de consultation est gratuit. Seuls les services commandés sont facturés.
+                            </p>
+                        </div>
+                        
+                        <div class="border-b border-gray-200 pb-4">
+                            <h3 class="font-semibold text-gobot-blue mb-2">Comment devenir partenaire ?</h3>
+                            <p class="text-gray-600 text-sm">
+                                Contactez-nous via ce formulaire ou appelez directement nos équipes commerciales.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="font-semibold text-gobot-blue mb-2">Support client</h3>
+                            <p class="text-gray-600 text-sm">
+                                Notre service client est disponible 7j/7 par téléphone.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h2 class="text-2xl font-bold text-gobot-blue mb-6 flex items-center">
+                        <span class="text-gobot-red mr-2">🌐</span>
+                        Suivez-nous
+                    </h2>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="#" class="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                            <span class="text-blue-600 text-xl">📘</span>
+                            <span class="font-medium text-blue-600">Facebook</span>
+                        </a>
+                        
+                        <a href="#" class="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                            <span class="text-blue-400 text-xl">🐦</span>
+                            <span class="font-medium text-blue-400">Twitter</span>
+                        </a>
+                        
+                        <a href="#" class="flex items-center space-x-3 p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                            <span class="text-pink-600 text-xl">📷</span>
+                            <span class="font-medium text-pink-600">Instagram</span>
+                        </a>
+                        
+                        <a href="#" class="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                            <span class="text-blue-700 text-xl">💼</span>
+                            <span class="font-medium text-blue-700">LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gobot-blue text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold mb-4">GoBot</h3>
+                    <p class="text-gray-300">La solution qui pense à tout et surtout à vous !</p>
+                </div>
+                
+                <div class="text-center md:text-left">
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-300 grid grid-cols-2 gap-x-4">
+                        <li><span class="text-gray-400 cursor-default">GoBot Food</span></li>
+                        <li><span class="text-gray-400 cursor-default">GoBot Event</span></li>
+                        <li><span class="text-gray-400 cursor-default">GoBot Mobile Money</span></li>
+                        <li><span class="text-gray-400 cursor-default">GoBot Assurance</span></li>
+                        <li><span class="text-gray-400 cursor-default">GoBot School</span></li>
+                        <li><span class="text-gray-400 cursor-default">GoBot Marketplace</span></li>
+                        <li><span class="text-gray-400 cursor-default">GoBot Médical</span></li>
+                        <li><span class="text-gray-400 cursor-default">GoBot Secure SIM</span></li>
+                        <li><span class="text-gray-400 cursor-default">GoBot Tourisme</span></li>
+                        <li><span class="text-gray-400 cursor-default">GoBot Wallet</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2025 GoBot - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (!validateForm('contact-form')) {
+                showNotification('Veuillez remplir tous les champs obligatoires', 'error');
+                return;
+            }
+            
+            const email = document.getElementById('email').value;
+            if (!isValidEmail(email)) {
+                showNotification('Veuillez entrer une adresse email valide', 'error');
+                return;
+            }
+            
+            const phone = document.getElementById('phone').value;
+            if (!isValidPhone(phone)) {
+                showNotification('Veuillez entrer un numéro de téléphone valide', 'error');
+                return;
+            }
+            
+            setLoadingState('submit-btn', true);
+            
+            // Simulate form submission
+            setTimeout(() => {
+                setLoadingState('submit-btn', false);
+                showNotification('Message envoyé avec succès ! Nous vous recontacterons bientôt.', 'success');
+                document.getElementById('contact-form').reset();
+            }, 2000);
+        });
+
+        // Check for partner type in URL
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('type') === 'partner') {
+            document.getElementById('service').value = 'partnership';
+            document.getElementById('subject').value = 'Demande de partenariat';
+        }
+    </script>
+</body>
+</html>

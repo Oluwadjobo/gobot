@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flying with GoBot - Réservez votre vol</title>
+    <!-- Tailwind CDN pour activer les classes utilitaires -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/images/image_gobot.png">
+</head>
+<body class="tech-background min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-gobot-blue">
+                        Go<span class="text-gobot-red">Bot</span>
+                    </a>
+                </div>
+                <div class="hidden lg:flex space-x-6">
+                    <a href="index.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Accueil</a>
+                    <a href="flying.html" class="flex items-center gap-2 px-4 py-2 rounded-xl font-medium text-white bg-gradient-to-r from-gobot-blue to-gobot-red shadow hover:from-gobot-red hover:to-gobot-blue transition-all">
+                        <span class="text-lg">✈️</span>
+                        <span>Flying with GoBot</span>
+                    </a>
+                    <a href="contact.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-gobot-blue">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg">
+                <a href="index.html" class="block py-2 text-gobot-blue hover:text-gobot-red">Accueil</a>
+                <a href="flying.html" class="block py-2 text-white bg-gobot-blue rounded-xl my-2 text-center font-medium shadow hover:bg-gobot-red transition-all">✈️ Flying with GoBot</a>
+                <a href="contact.html" class="block py-2 text-gobot-blue hover:text-gobot-red">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-white text-gray-800 py-20 relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Content Left -->
+                <div class="text-left">
+                    <h1 class="text-5xl md:text-6xl font-extrabold mb-6 text-gray-900">
+                        Flying <span class="text-gobot-red">with GoBot</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 max-w-3xl text-gray-700">
+                        Réservez vos billets d’avion en toute simplicité, comparez les meilleures options et voyagez sereinement avec GoBot.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-10">
+                        <div class="flex flex-row flex-wrap gap-3 items-center">
+                            <span class="inline-flex items-center bg-white border border-gray-200 text-gobot-blue font-semibold px-4 py-2 rounded-xl text-base shadow hover:shadow-md transition"><span class="mr-2">🔎</span>Multi-compagnies</span>
+                            <span class="inline-flex items-center bg-white border border-gray-200 text-gobot-blue font-semibold px-4 py-2 rounded-xl text-base shadow hover:shadow-md transition"><span class="mr-2">💸</span>Prix en temps réel</span>
+                            <span class="inline-flex items-center bg-white border border-gray-200 text-gobot-blue font-semibold px-4 py-2 rounded-xl text-base shadow hover:shadow-md transition"><span class="mr-2">🔒</span>Paiement sécurisé</span>
+                            <span class="inline-flex items-center bg-white border border-gray-200 text-gobot-blue font-semibold px-4 py-2 rounded-xl text-base shadow hover:shadow-md transition"><span class="mr-2">🤝</span>Assistance 24/7</span>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Avion Right -->
+                <div class="flex justify-center lg:justify-end">
+                    <div class="robot-float robot-hover flex justify-end">
+                        <img src="assets/images/plane_gobot.png" alt="Avion GoBot" class="w-64 md:w-80 lg:w-[28rem] drop-shadow-2xl" style="max-width: 100%; height: auto;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulaire de réservation de vol -->
+    <section id="booking" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gobot-blue mb-8 text-center flex items-center justify-center gap-2"><img src="assets/images/plane_gobot.png" alt="Avion GoBot" class="w-8 h-8 inline-block mr-2"> Réserver mon vol</h2>
+                <form class="space-y-6" id="flight-booking-form">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gobot-blue font-semibold mb-2">Départ</label>
+                            <input type="text" name="from" required placeholder="Ville ou aéroport de départ" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-gobot-blue focus:border-gobot-blue outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-gobot-blue font-semibold mb-2">Arrivée</label>
+                            <input type="text" name="to" required placeholder="Ville ou aéroport d'arrivée" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-gobot-blue focus:border-gobot-blue outline-none">
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gobot-blue font-semibold mb-2">Date de départ</label>
+                            <input type="date" name="date_depart" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-gobot-blue focus:border-gobot-blue outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-gobot-blue font-semibold mb-2">Date de retour (optionnel)</label>
+                            <input type="date" name="date_retour" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-gobot-blue focus:border-gobot-blue outline-none">
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gobot-blue font-semibold mb-2">Nombre de passagers</label>
+                            <input type="number" name="passengers" min="1" max="9" value="1" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-gobot-blue focus:border-gobot-blue outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-gobot-blue font-semibold mb-2">Classe</label>
+                            <select name="class" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-gobot-blue focus:border-gobot-blue outline-none">
+                                <option value="Economy">Économique</option>
+                                <option value="Premium">Premium</option>
+                                <option value="Business">Business</option>
+                                <option value="First">Première</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-gobot-blue font-semibold mb-2">Nom complet</label>
+                        <input type="text" name="fullname" required placeholder="Votre nom complet" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-gobot-blue focus:border-gobot-blue outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-gobot-blue font-semibold mb-2">Email</label>
+                        <input type="email" name="email" required placeholder="Votre email" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-gobot-blue focus:border-gobot-blue outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-gobot-blue font-semibold mb-2">Téléphone</label>
+                        <input type="tel" name="phone" required placeholder="Votre numéro de téléphone" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-gobot-blue focus:border-gobot-blue outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-gobot-blue font-semibold mb-2">Remarques (optionnel)</label>
+                        <textarea name="notes" rows="3" placeholder="Précisez vos besoins, préférences, etc." class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-gobot-blue focus:border-gobot-blue outline-none"></textarea>
+                    </div>
+                    <div class="text-center pt-4">
+                        <button type="submit" class="bg-gobot-blue hover:bg-gobot-red text-white font-extrabold px-12 py-4 rounded-xl text-xl shadow-lg transition-all flex items-center gap-2 justify-center mx-auto tracking-wide border-2 border-gobot-blue focus:outline-none focus:ring-4 focus:ring-gobot-blue/30">
+                            <img src="assets/images/plane_gobot.png" alt="" class="w-7 h-7 inline-block mr-2"> Réserver mon vol
+                        </button>
+                        <style>
+                        .bg-gobot-blue { background-color: #2563eb !important; }
+                        .hover\:bg-gobot-red:hover { background-color: #CD3446 !important; }
+                        .border-gobot-blue { border-color: #2563eb !important; }
+                        .focus\:ring-gobot-blue\/30:focus { box-shadow: 0 0 0 4px rgba(37,99,235,0.3) !important; }
+                        </style>
+                        </button>
+                    </div>
+                </form>
+                <div id="booking-success" class="hidden text-center text-green-600 font-semibold mt-8">🎉 Votre demande de réservation a bien été envoyée !<br>Notre équipe vous contactera rapidement.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white bg-opacity-80 py-8 mt-12">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+            © 2025 GoBot. Tous droits réservés.
+        </div>
+    </footer>
+
+    <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn').onclick = function() {
+        var menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    };
+    // Booking form feedback
+    document.getElementById('flight-booking-form').onsubmit = function(e) {
+        e.preventDefault();
+        document.getElementById('booking-success').classList.remove('hidden');
+        this.reset();
+    };
+    </script>
+</body>
+</html>

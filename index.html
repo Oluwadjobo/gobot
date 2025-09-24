@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoBot - Votre Assistant Intelligent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gobot-red': '#CD3446',
+                        'gobot-red-secondary': '#CB2C3F',
+                        'gobot-red-alt': '#CC3143',
+                        'gobot-blue': '#0F2E4A',
+                        'gobot-white': '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="tech-background min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-gobot-blue">
+                        Go<span class="text-gobot-red">Bot</span>
+                    </h1>
+                </div>
+                <div class="hidden lg:flex space-x-6">
+                    <a href="index.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Accueil</a>
+                    <a href="flying.html" class="flex items-center gap-2 px-4 py-2 rounded-xl font-medium text-white bg-gradient-to-r from-gobot-blue to-gobot-red shadow hover:from-gobot-red hover:to-gobot-blue transition-all">
+                        <span class="text-lg">✈️</span>
+                        <span>Flying with GoBot</span>
+                    </a>
+                    <a href="contact.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-gobot-blue">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg">
+                <a href="index.html" class="block py-2 text-gobot-blue hover:text-gobot-red">Accueil</a>
+                <a href="flying.html" class="block py-2 text-white bg-gradient-to-r from-gobot-blue to-gobot-red rounded-xl my-2 text-center font-medium shadow hover:from-gobot-red hover:to-gobot-blue transition-all">
+                    ✈️ Flying with GoBot
+                </a>
+                <a href="contact.html" class="block py-2 text-gobot-blue hover:text-gobot-red">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-white text-gray-800 py-20 relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Content Left -->
+                <div class="text-left">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                        Go<span class="text-gobot-red">Bot</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 max-w-3xl text-gray-600">
+                        Votre assistant intelligent qui simplifie votre quotidien
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})" 
+                                class="bg-gobot-red text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gobot-red-secondary transition-all transform hover:scale-105">
+                            🚀 Découvrir nos services
+                        </button>
+                        <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
+                           class="bg-transparent border-2 border-gobot-red text-gobot-red px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gobot-red hover:text-white transition-all text-center">
+                            📞 Nous contacter
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Robot Image Right -->
+                <div class="flex justify-center lg:justify-end">
+                    <div id="robot" class="robot-float robot-hover">
+                        <img src="assets/images/image_gobot.png" alt="GoBot Assistant" 
+                             class="w-72 h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] object-contain" 
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="w-72 h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] bg-gradient-to-br from-gobot-red to-gobot-red-secondary rounded-full flex items-center justify-center text-8xl md:text-9xl lg:text-[12rem]" style="display: none;">
+                            🤖
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloc de mise en avant Flying with GoBot -->
+    <section id="flying-gobot" class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8 bg-gradient-to-r from-gobot-blue to-gobot-red rounded-3xl shadow-xl p-8 md:p-12">
+                <div class="flex-1 text-center md:text-left">
+                    <div class="inline-flex items-center justify-center mb-4">
+                        <span class="text-5xl md:text-6xl mr-3">✈️</span>
+                        <span class="text-2xl md:text-3xl font-bold text-white drop-shadow">Flying with GoBot</span>
+                    </div>
+                    <p class="text-lg md:text-xl text-white opacity-90 mb-6 max-w-xl">
+                        Réservez vos billets d’avion en toute simplicité, comparez les meilleures options et voyagez sereinement avec GoBot.
+                    </p>
+                        <a href="flying.html#booking" class="inline-block bg-white text-gobot-blue font-semibold px-8 py-3 rounded-xl shadow hover:bg-gobot-blue hover:text-white transition-all text-lg">Je veux réserver un vol</a>
+                </div>
+                <div class="flex-1 flex justify-center md:justify-end">
+                    <div class="bg-white bg-opacity-20 rounded-full p-6 md:p-10 flex items-center justify-center shadow-lg">
+                        <span class="text-[6rem] md:text-[8rem] text-white drop-shadow-lg">✈️</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Nos Services</h2>
+                <p class="text-xl text-white opacity-90 max-w-2xl mx-auto">
+                    Découvrez notre gamme complète de services conçus pour vous faciliter la vie
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 max-w-7xl mx-auto">
+                <!-- GoBot Food -->
+                <!-- <a href="services/food.html" class="group"> -->
+                <div class="group cursor-default">
+                    <div class="service-card bg-white rounded-xl p-4 shadow-lg border-2 border-transparent hover:border-gobot-red/20 transition-all duration-300 h-full">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                <span class="text-2xl">🍽️</span>
+                            </div>
+                            <h3 class="text-sm font-bold text-gobot-blue mb-2">GoBot Food</h3>
+                            <p class="text-xs text-gray-600 mb-2 line-clamp-2">Commandez vos repas favoris en quelques clics. Livraison rapide et savoureuse !</p>
+                        </div>
+                    </div>
+                <!-- </a> -->
+                </div>
+
+                <!-- GoBot Event -->
+                <!-- <a href="services/event.html" class="group"> -->
+                <div class="group cursor-default">
+                    <div class="service-card bg-white rounded-xl p-4 shadow-lg border-2 border-transparent hover:border-gobot-red/20 transition-all duration-300 h-full">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                <span class="text-2xl">🎉</span>
+                            </div>
+                            <h3 class="text-sm font-bold text-gobot-blue mb-2">GoBot Event</h3>
+                            <p class="text-xs text-gray-600 mb-2 line-clamp-2">Billetterie sécurisée</p>
+                        </div>
+                    </div>
+                <!-- </a> -->
+                </div>
+
+                <!-- GoBot Mobile Money -->
+                <!-- <a href="services/mobile-money.html" class="group"> -->
+                <div class="group cursor-default">
+                    <div class="service-card bg-white rounded-xl p-4 shadow-lg border-2 border-transparent hover:border-gobot-red/20 transition-all duration-300 h-full">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                <span class="text-2xl">💰</span>
+                            </div>
+                            <h3 class="text-sm font-bold text-gobot-blue mb-2">GoBot Mobile Money</h3>
+                            <p class="text-xs text-gray-600 mb-2 line-clamp-2">Transactions rapides et sécurisées. Transferts interopérabilité, paiements, recharges...</p>
+                        </div>
+                    </div>
+                <!-- </a> -->
+                </div>
+
+                <!-- GoBot Assurance -->
+                <!-- <a href="services/assurance.html" class="group"> -->
+                <div class="group cursor-default">
+                    <div class="service-card bg-white rounded-xl p-4 shadow-lg border-2 border-transparent hover:border-gobot-red/20 transition-all duration-300 h-full">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                <span class="text-2xl">🛡️</span>
+                            </div>
+                            <h3 class="text-sm font-bold text-gobot-blue mb-2">GoBot Assurance</h3>
+                            <p class="text-xs text-gray-600 mb-2 line-clamp-2">Assurance Automobile, Voyage et personnes</p>
+                        </div>
+                    </div>
+                <!-- </a> -->
+                </div>
+
+                <!-- GoBot School -->
+                <!-- <a href="services/school.html" class="group"> -->
+                <div class="group cursor-default">
+                    <div class="service-card bg-white rounded-xl p-4 shadow-lg border-2 border-transparent hover:border-gobot-red/20 transition-all duration-300 h-full">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                <span class="text-2xl">📚</span>
+                            </div>
+                            <h3 class="text-sm font-bold text-gobot-blue mb-2">GoBot School</h3>
+                            <p class="text-xs text-gray-600 mb-2 line-clamp-2">Achat sans stress de fournitures scolaires</p>
+                        </div>
+                    </div>
+                <!-- </a> -->
+                </div>
+
+                <!-- GoBot Marketplace -->
+                <!-- <a href="services/marketplace.html" class="group"> -->
+                <div class="group cursor-default">
+                    <div class="service-card bg-white rounded-xl p-4 shadow-lg border-2 border-transparent hover:border-gobot-red/20 transition-all duration-300 h-full">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                <span class="text-2xl">🛒</span>
+                            </div>
+                            <h3 class="text-sm font-bold text-gobot-blue mb-2">GoBot Marketplace</h3>
+                            <p class="text-xs text-gray-600 mb-2 line-clamp-2">Lieu de rencontre de l'offre et de la demande. Vendez et Achetez comment jamais.</p>
+                        </div>
+                    </div>
+                <!-- </a> -->
+                </div>
+
+                <!-- GoBot Médical -->
+                <div class="group cursor-default">
+                    <div class="service-card bg-white rounded-xl p-4 shadow-lg border-2 border-transparent hover:border-gobot-red/20 transition-all duration-300 h-full">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-red-400 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                <span class="text-2xl">🏥</span>
+                            </div>
+                            <h3 class="text-sm font-bold text-gobot-blue mb-2">GoBot Médical</h3>
+                            <p class="text-xs text-gray-600 mb-2 line-clamp-2">Consultations médicales en ligne et suivi de santé personnalisé</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GoBot Secure SIM -->
+                <div class="group cursor-default">
+                    <div class="service-card bg-white rounded-xl p-4 shadow-lg border-2 border-transparent hover:border-gobot-red/20 transition-all duration-300 h-full">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                <span class="text-2xl">🔐</span>
+                            </div>
+                            <h3 class="text-sm font-bold text-gobot-blue mb-2">GoBot Secure SIM</h3>
+                            <p class="text-xs text-gray-600 mb-2 line-clamp-2">Cartes SIM sécurisées avec protection avancée des données</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GoBot Tourisme -->
+                <div class="group cursor-default">
+                    <div class="service-card bg-white rounded-xl p-4 shadow-lg border-2 border-transparent hover:border-gobot-red/20 transition-all duration-300 h-full">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-teal-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                <span class="text-2xl">🌍</span>
+                            </div>
+                            <h3 class="text-sm font-bold text-gobot-blue mb-2">GoBot Tourisme</h3>
+                            <p class="text-xs text-gray-600 mb-2 line-clamp-2">Découvrez des destinations uniques avec nos guides personnalisés</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GoBot Wallet -->
+                <div class="group cursor-default">
+                    <div class="service-card bg-white rounded-xl p-4 shadow-lg border-2 border-transparent hover:border-gobot-red/20 transition-all duration-300 h-full">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                <span class="text-2xl">💳</span>
+                            </div>
+                            <h3 class="text-sm font-bold text-gobot-blue mb-2">GoBot Wallet</h3>
+                            <p class="text-xs text-gray-600 mb-2 line-clamp-2">Portefeuille numérique sécurisé pour toutes vos transactions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-16 bg-gobot-blue text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">GoBot en chiffres</h2>
+                <p class="text-xl opacity-90">Votre confiance, notre réussite</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-white mb-2">500,000+</div>
+                    <div class="text-lg opacity-90">Clients satisfaits</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-white mb-2">10</div>
+                    <div class="text-lg opacity-90">Services disponibles</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-white mb-2">3</div>
+                    <div class="text-lg opacity-90">Pays d'opération</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-white mb-2">24/7</div>
+                    <div class="text-lg opacity-90">Support client</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gobot-blue mb-4">Contactez-nous</h2>
+                    <p class="text-xl text-gray-600">Nous sommes là pour vous accompagner dans tous vos projets</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-2xl p-6 shadow-lg text-center hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-gobot-red/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">🇧🇯</span>
+                        </div>
+                        <h3 class="font-bold text-gobot-blue mb-2">Bénin</h3>
+                        <p class="text-gray-600 mb-2 font-mono text-sm">+229 97970370</p>
+                        <p class="text-gray-600 mb-4 text-sm">contact@gobot.bj</p>
+                        <a href="https://wa.me/22997970370" target="_blank"
+                           class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors inline-flex items-center justify-center w-full text-sm">
+                            <span class="mr-1">💬</span>
+                            Contacter
+                        </a>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-6 shadow-lg text-center hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-gobot-red/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">🇹🇬</span>
+                        </div>
+                        <h3 class="font-bold text-gobot-blue mb-2">Togo</h3>
+                        <p class="text-gray-600 mb-2 font-mono text-sm">+228 70153434</p>
+                        <p class="text-gray-600 mb-4 text-sm">contact@gobot.tg</p>
+                        <a href="https://wa.me/22870153434" target="_blank"
+                           class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors inline-flex items-center justify-center w-full text-sm">
+                            <span class="mr-1">💬</span>
+                            Contacter
+                        </a>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-6 shadow-lg text-center hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-gobot-red/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">🇨🇮</span>
+                        </div>
+                        <h3 class="font-bold text-gobot-blue mb-2">Côte d'Ivoire</h3>
+                        <p class="text-gray-600 mb-2 font-mono text-sm">+225 0717322570</p>
+                        <p class="text-gray-600 mb-4 text-sm">contact@gobot.ci</p>
+                        <a href="https://wa.me/2250717322570" target="_blank"
+                           class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors inline-flex items-center justify-center w-full text-sm">
+                            <span class="mr-1">💬</span>
+                            Contacter
+                        </a>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-6 shadow-lg text-center hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-gobot-red/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">🇫🇷</span>
+                        </div>
+                        <h3 class="font-bold text-gobot-blue mb-2">France</h3>
+                        <p class="text-gray-600 mb-2 font-mono text-sm">+33 X XX XX XX XX</p>
+                        <p class="text-gray-600 mb-4 text-sm">contact@gobot.fr</p>
+                        <span class="bg-gray-400 text-white px-4 py-2 rounded-lg cursor-default inline-block w-full text-sm">
+                            Bientôt disponible
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Partnership CTA -->
+                <div class="mt-12 bg-gradient-to-br from-gobot-red to-gobot-red-secondary text-white rounded-2xl p-8 text-center">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center justify-center">
+                        <span class="mr-2">🤝</span>
+                        Devenez Partenaire GoBot
+                    </h3>
+                    <p class="text-lg mb-6 opacity-90 max-w-2xl mx-auto">
+                        Rejoignez notre réseau de partenaires et développez votre business avec l'écosystème GoBot
+                    </p>
+                    <a href="contact.html?type=partner" 
+                       class="inline-block bg-white text-gobot-red px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors">
+                        En savoir plus
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gobot-blue text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold mb-4">GoBot</h3>
+                    <p class="text-gray-300">La solution qui pense à tout et surtout à vous !</p>
+                </div>
+                
+                <div class="text-center md:text-left">
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-300 grid grid-cols-2 gap-x-4">
+                        <li><span class="text-gray-400 cursor-default">GoBot Food</span></li>
+                        <li><span class="text-gray-400 cursor-default">GoBot Event</span></li>
+                        <li><span class="text-gray-400 cursor-default">GoBot Mobile Money</span></li>
+                        <li><span class="text-gray-400 cursor-default">GoBot Assurance</span></li>
+                        <li><span class="text-gray-400 cursor-default">GoBot School</span></li>
+                        <li><span class="text-gray-400 cursor-default">GoBot Marketplace</span></li>
+                        <li><span class="text-gray-400 cursor-default">GoBot Médical</span></li>
+                        <li><span class="text-gray-400 cursor-default">GoBot Secure SIM</span></li>
+                        <li><span class="text-gray-400 cursor-default">GoBot Tourisme</span></li>
+                        <li><span class="text-gray-400 cursor-default">GoBot Wallet</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2025 GoBot - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoBot Sunu Assurance - Protection complète</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gobot-red': '#CD3446',
+                        'gobot-red-secondary': '#CB2C3F',
+                        'gobot-red-alt': '#CC3143',
+                        'gobot-blue': '#0F2E4A',
+                        'gobot-white': '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="tech-background">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold text-gobot-blue">
+                        Go<span class="text-gobot-red">Bot</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Accueil</a>
+                    <a href="food.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">GoBot Food</a>
+                    <a href="event.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">GoBot Event</a>
+                    <a href="mobile-money.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Mobile Money</a>
+                    <a href="assurance.html" class="text-gobot-red font-medium">Assurance</a>
+                    <a href="../contact.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center mb-6">
+                <span class="text-6xl mr-4">🛡️</span>
+                <h1 class="text-5xl font-bold">GoBot Sunu Assurance</h1>
+            </div>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Protection complète pour votre tranquillité d'esprit. Assurance santé, auto, habitation et plus encore !
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="btn-primary text-white px-8 py-4 rounded-xl font-semibold text-lg">
+                    🛡️ Obtenir un devis
+                </button>
+                <button class="bg-white text-gobot-red px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors">
+                    💼 Devenir courtier
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gobot-blue mb-12">
+                Nos solutions d'assurance
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">🏥</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Assurance Santé</h3>
+                    <p class="text-gray-600 mb-4">
+                        Couverture médicale complète pour toute la famille avec un réseau de soins étendu.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>✓ Hospitalisation et chirurgie</li>
+                        <li>✓ Consultations médicales</li>
+                        <li>✓ Pharmacie et analyses</li>
+                        <li>✓ Évacuation sanitaire</li>
+                    </ul>
+                    <div class="mt-4 text-center">
+                        <span class="text-gobot-red font-bold">À partir de 15 000 FCFA/mois</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">🚗</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Assurance Auto</h3>
+                    <p class="text-gray-600 mb-4">
+                        Protection tous risques pour votre véhicule avec assistance 24h/24.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>✓ Tous risques et tiers</li>
+                        <li>✓ Vol et incendie</li>
+                        <li>✓ Assistance dépannage</li>
+                        <li>✓ Véhicule de remplacement</li>
+                    </ul>
+                    <div class="mt-4 text-center">
+                        <span class="text-gobot-red font-bold">À partir de 8 000 FCFA/mois</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">🏠</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Assurance Habitation</h3>
+                    <p class="text-gray-600 mb-4">
+                        Protégez votre domicile et vos biens contre tous les risques.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>✓ Incendie et dégâts des eaux</li>
+                        <li>✓ Vol et vandalisme</li>
+                        <li>✓ Responsabilité civile</li>
+                        <li>✓ Biens mobiliers</li>
+                    </ul>
+                    <div class="mt-4 text-center">
+                        <span class="text-gobot-red font-bold">À partir de 5 000 FCFA/mois</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">💼</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Assurance Professionnelle</h3>
+                    <p class="text-gray-600 mb-4">
+                        Solutions sur mesure pour protéger votre activité professionnelle.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>✓ Responsabilité civile pro</li>
+                        <li>✓ Protection juridique</li>
+                        <li>✓ Perte d'exploitation</li>
+                        <li>✓ Cyber-risques</li>
+                    </ul>
+                    <div class="mt-4 text-center">
+                        <span class="text-gobot-red font-bold">Devis personnalisé</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">✈️</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Assurance Voyage</h3>
+                    <p class="text-gray-600 mb-4">
+                        Voyagez l'esprit tranquille avec une couverture mondiale complète.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>✓ Frais médicaux à l'étranger</li>
+                        <li>✓ Rapatriement sanitaire</li>
+                        <li>✓ Annulation voyage</li>
+                        <li>✓ Bagages et effets personnels</li>
+                    </ul>
+                    <div class="mt-4 text-center">
+                        <span class="text-gobot-red font-bold">À partir de 2 000 FCFA</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">👨‍👩‍👧‍👦</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Assurance Vie</h3>
+                    <p class="text-gray-600 mb-4">
+                        Protégez l'avenir de votre famille avec nos solutions d'épargne et de prévoyance.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>✓ Capital décès</li>
+                        <li>✓ Épargne retraite</li>
+                        <li>✓ Éducation enfants</li>
+                        <li>✓ Rente viagère</li>
+                    </ul>
+                    <div class="mt-4 text-center">
+                        <span class="text-gobot-red font-bold">À partir de 10 000 FCFA/mois</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gobot-blue mb-12">
+                Comment souscrire une assurance ?
+            </h2>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="step-card bg-gray-50 p-6 rounded-2xl text-center">
+                    <div class="bg-gobot-red text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Contactez-nous</h3>
+                    <p class="text-gray-600 text-sm">Appelez-nous pour un conseil personnalisé</p>
+                </div>
+                
+                <div class="step-card bg-gray-50 p-6 rounded-2xl text-center">
+                    <div class="bg-gobot-red text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Évaluation</h3>
+                    <p class="text-gray-600 text-sm">Nous évaluons vos besoins et risques</p>
+                </div>
+                
+                <div class="step-card bg-gray-50 p-6 rounded-2xl text-center">
+                    <div class="bg-gobot-red text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Devis gratuit</h3>
+                    <p class="text-gray-600 text-sm">Recevez votre devis personnalisé</p>
+                </div>
+                
+                <div class="step-card bg-gray-50 p-6 rounded-2xl text-center">
+                    <div class="bg-gobot-red text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Souscription</h3>
+                    <p class="text-gray-600 text-sm">Signez et vous êtes protégé !</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gobot-blue mb-12">
+                Pourquoi choisir GoBot Sunu Assurance ?
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl">⚡</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Règlement rapide</h3>
+                    <p class="text-gray-600">Vos sinistres sont traités et réglés sous 48h maximum.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl">🏆</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">20 ans d'expérience</h3>
+                    <p class="text-gray-600">Leader de l'assurance en Afrique de l'Ouest depuis 2005.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-red-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl">📞</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Service client 24/7</h3>
+                    <p class="text-gray-600">Une équipe dédiée disponible jour et nuit pour vous aider.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-yellow-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl">🌍</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Couverture internationale</h3>
+                    <p class="text-gray-600">Protection étendue dans plus de 150 pays dans le monde.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl">💰</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Tarifs compétitifs</h3>
+                    <p class="text-gray-600">Les meilleurs prix du marché avec des garanties optimales.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-pink-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl">📱</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">100% digital</h3>
+                    <p class="text-gray-600">Gérez vos contrats et déclarez vos sinistres en ligne.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="hero-section text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Prêt à vous protéger ?</h2>
+            <p class="text-lg mb-8">Plus de 500 000 clients nous font confiance</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-2xl font-bold">🇧🇯 +229 97970370</div>
+                    <div class="text-sm">Bénin</div>
+                </div>
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-2xl font-bold">🇹🇬 +228 70153434</div>
+                    <div class="text-sm">Togo</div>
+                </div>
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-2xl font-bold">🇨🇮 +225 0717322570</div>
+                    <div class="text-sm">Côte d'Ivoire</div>
+                </div>
+            </div>
+            
+            <button class="bg-white text-gobot-red px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors">
+                🛡️ Obtenir mon devis gratuit
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gobot-blue text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">GoBot Sunu Assurance</h3>
+                    <p class="text-gray-300">Votre protection, notre engagement</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Assurances</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Santé</a></li>
+                        <li><a href="#" class="hover:text-white">Auto</a></li>
+                        <li><a href="#" class="hover:text-white">Habitation</a></li>
+                        <li><a href="#" class="hover:text-white">Voyage</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Déclaration sinistre</a></li>
+                        <li><a href="#" class="hover:text-white">Suivi dossier</a></li>
+                        <li><a href="#" class="hover:text-white">Assistance</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Partenaires</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Devenir courtier</a></li>
+                        <li><a href="#" class="hover:text-white">Réseau médical</a></li>
+                        <li><a href="#" class="hover:text-white">Garages partenaires</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2025 GoBot Sunu Assurance - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

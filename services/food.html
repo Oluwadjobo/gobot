@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoBot Food - Commandez en ligne</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gobot-red': '#CD3446',
+                        'gobot-red-secondary': '#CB2C3F',
+                        'gobot-red-alt': '#CC3143',
+                        'gobot-blue': '#0F2E4A',
+                        'gobot-white': '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="tech-background">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold text-gobot-blue">
+                        Go<span class="text-gobot-red">Bot</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Accueil</a>
+                    <a href="food.html" class="text-gobot-red font-medium">GoBot Food</a>
+                    <a href="event.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">GoBot Event</a>
+                    <a href="mobile-money.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Mobile Money</a>
+                    <a href="assurance.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Assurance</a>
+                    <a href="../contact.html" class="text-gobot-blue hover:text-gobot-red font-medium transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center mb-6">
+                <span class="text-6xl mr-4">🍽️</span>
+                <h1 class="text-5xl font-bold">GoBot Food</h1>
+            </div>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Commandez vos repas favoris en quelques clics. Livraison rapide et fraîcheur garantie !
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="btn-primary text-white px-8 py-4 rounded-xl font-semibold text-lg">
+                    📱 Commander maintenant
+                </button>
+                <button class="bg-white text-gobot-red px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors">
+                    🏪 Devenir restaurant partenaire
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gobot-blue mb-12">
+                Pourquoi choisir GoBot Food ?
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <div class="text-5xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Livraison Express</h3>
+                    <p class="text-gray-600">
+                        Recevez vos commandes en moins de 30 minutes dans un rayon de 5km
+                    </p>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <div class="text-5xl mb-4">👨‍🍳</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Restaurants de Qualité</h3>
+                    <p class="text-gray-600">
+                        Plus de 200 restaurants partenaires sélectionnés pour leur excellence
+                    </p>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <div class="text-5xl mb-4">💳</div>
+                    <h3 class="text-xl font-bold text-gobot-blue mb-4">Paiement Simple</h3>
+                    <p class="text-gray-600">
+                        Mobile Money, carte bancaire ou espèces. Choisissez ce qui vous convient
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gobot-blue mb-12">
+                Comment ça marche ?
+            </h2>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="step-card bg-gray-50 p-6 rounded-2xl text-center">
+                    <div class="bg-gobot-red text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Appelez</h3>
+                    <p class="text-gray-600 text-sm">Contactez-nous au numéro de votre pays</p>
+                </div>
+                
+                <div class="step-card bg-gray-50 p-6 rounded-2xl text-center">
+                    <div class="bg-gobot-red text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Choisissez</h3>
+                    <p class="text-gray-600 text-sm">Sélectionnez GoBot Food dans le menu</p>
+                </div>
+                
+                <div class="step-card bg-gray-50 p-6 rounded-2xl text-center">
+                    <div class="bg-gobot-red text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Commandez</h3>
+                    <p class="text-gray-600 text-sm">Parcourez le menu et faites votre choix</p>
+                </div>
+                
+                <div class="step-card bg-gray-50 p-6 rounded-2xl text-center">
+                    <div class="bg-gobot-red text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
+                    <h3 class="font-bold text-gobot-blue mb-2">Recevez</h3>
+                    <p class="text-gray-600 text-sm">Votre repas arrive chaud à votre porte</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Categories -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gobot-blue mb-12">
+                Nos catégories populaires
+            </h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="feature-card bg-white p-6 rounded-2xl shadow-lg text-center cursor-pointer hover:bg-gobot-red hover:text-white transition-all">
+                    <div class="text-4xl mb-3">🍔</div>
+                    <h3 class="font-semibold">Fast Food</h3>
+                </div>
+                
+                <div class="feature-card bg-white p-6 rounded-2xl shadow-lg text-center cursor-pointer hover:bg-gobot-red hover:text-white transition-all">
+                    <div class="text-4xl mb-3">🍛</div>
+                    <h3 class="font-semibold">Plats Africains</h3>
+                </div>
+                
+                <div class="feature-card bg-white p-6 rounded-2xl shadow-lg text-center cursor-pointer hover:bg-gobot-red hover:text-white transition-all">
+                    <div class="text-4xl mb-3">🍕</div>
+                    <h3 class="font-semibold">Pizza</h3>
+                </div>
+                
+                <div class="feature-card bg-white p-6 rounded-2xl shadow-lg text-center cursor-pointer hover:bg-gobot-red hover:text-white transition-all">
+                    <div class="text-4xl mb-3">🥗</div>
+                    <h3 class="font-semibold">Salade</h3>
+                </div>
+                
+                <div class="feature-card bg-white p-6 rounded-2xl shadow-lg text-center cursor-pointer hover:bg-gobot-red hover:text-white transition-all">
+                    <div class="text-4xl mb-3">🍜</div>
+                    <h3 class="font-semibold">Soupes</h3>
+                </div>
+                
+                <div class="feature-card bg-white p-6 rounded-2xl shadow-lg text-center cursor-pointer hover:bg-gobot-red hover:text-white transition-all">
+                    <div class="text-4xl mb-3">🥤</div>
+                    <h3 class="font-semibold">Boissons</h3>
+                </div>
+                
+                <div class="feature-card bg-white p-6 rounded-2xl shadow-lg text-center cursor-pointer hover:bg-gobot-red hover:text-white transition-all">
+                    <div class="text-4xl mb-3">🍰</div>
+                    <h3 class="font-semibold">Desserts</h3>
+                </div>
+                
+                <div class="feature-card bg-white p-6 rounded-2xl shadow-lg text-center cursor-pointer hover:bg-gobot-red hover:text-white transition-all">
+                    <div class="text-4xl mb-3">☕</div>
+                    <h3 class="font-semibold">Café & Thé</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="hero-section text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Prêt à commander ?</h2>
+            <p class="text-lg mb-8">Plus de 50,000 clients nous font confiance chaque jour</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-2xl font-bold">🇧🇯 *144#</div>
+                    <div class="text-sm">Bénin</div>
+                </div>
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-2xl font-bold">🇹🇬 *155#</div>
+                    <div class="text-sm">Togo</div>
+                </div>
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-2xl font-bold">🇨🇮 *166#</div>
+                    <div class="text-sm">Côte d'Ivoire</div>
+                </div>
+            </div>
+            
+            <button class="bg-white text-gobot-red px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors">
+                🍽️ Commander maintenant
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gobot-blue text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">GoBot Food</h3>
+                    <p class="text-gray-300">La nourriture que vous aimez, livrée avec amour</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Livraison</a></li>
+                        <li><a href="#" class="hover:text-white">À emporter</a></li>
+                        <li><a href="#" class="hover:text-white">Catering</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Aide</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Partenaires</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Devenir partenaire</a></li>
+                        <li><a href="#" class="hover:text-white">Espace restaurant</a></li>
+                        <li><a href="#" class="hover:text-white">Livreur</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2025 GoBot Food - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
